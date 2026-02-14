@@ -26,7 +26,7 @@ export function Instructors() {
               </div>
 
               <h3 className="mt-5 text-xl font-bold text-white">{inst.name}</h3>
-              <p className="text-sm text-gray">{inst.role}</p>
+              <p className="text-sm font-medium text-accent">{inst.role}</p>
               <p className="mt-2 inline-block rounded-full bg-white/10 px-3 py-1 text-sm font-semibold text-white">
                 {inst.experience}
               </p>

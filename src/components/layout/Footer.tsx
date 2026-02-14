@@ -37,7 +37,16 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col items-start gap-4 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <span className="text-xs text-gray">&copy; {new Date().getFullYear()} AK BARBERS Academy</span>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <span className="text-xs text-gray">&copy; {new Date().getFullYear()} AK BARBERS Academy</span>
+            <span className="hidden text-gray/30 sm:inline">|</span>
+            <span className="text-xs text-gray/50">
+              Web{" "}
+              <a href="https://www.weblyx.cz" target="_blank" rel="noopener noreferrer" className="text-gray/50 transition-colors hover:text-gray">
+                weblyx.cz
+              </a>
+            </span>
+          </div>
           <div className="flex flex-wrap gap-6">
             <a href={siteConfig.parentUrl} className="text-xs text-gray transition-colors hover:text-white">
               AK BARBERS
@@ -49,15 +58,6 @@ export function Footer() {
               Prohlášení o ochraně osobních údajů
             </a>
           </div>
-        </div>
-
-        <div className="mt-6 text-center">
-          <span className="text-xs text-gray">
-            Vytvořil{" "}
-            <a href="https://www.weblyx.cz" target="_blank" rel="noopener noreferrer" className="text-gray transition-colors hover:text-white">
-              www.weblyx.cz
-            </a>
-          </span>
         </div>
       </div>
     </footer>
