@@ -1,19 +1,67 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 import Image from "next/image";
 import { navItems, siteConfig } from "@/lib/data";
 import { MobileMenu } from "./MobileMenu";
+import type { NavItem } from "@/types";
+
+function resolveHref(href: string, isHome: boolean) {
+  if (href.startsWith("#")) {
+    return isHome ? href : `/${href}`;
+  }
+  return href;
+}
+
+function DesktopDropdown({ item, isHome }: { item: NavItem; isHome: boolean }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <a
+        href={resolveHref(item.href, isHome)}
+        className="flex items-center gap-1 text-sm font-medium text-gray transition-colors hover:text-white"
+      >
+        {item.label}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-3 w-3">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </a>
+
+      {open && item.children && (
+        <div className="absolute left-0 top-full z-50 mt-1 min-w-[180px] rounded-lg border border-border bg-bg p-2 shadow-xl">
+          {item.children.map((child) => (
+            <a
+              key={child.href}
+              href={child.href}
+              className="block rounded-md px-3 py-2 text-sm text-gray transition-colors hover:bg-bg-card hover:text-white"
+            >
+              {child.label}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-border bg-bg">
         <div className="container flex h-[72px] items-center justify-between">
           <div className="flex items-center gap-4">
-            <a href="/" className="relative shrink-0">
+            <Link href="/" className="relative shrink-0">
               <Image
                 src="/images/logo-academy-black.jpeg"
                 alt="AK BARBERS Academy"
@@ -22,7 +70,7 @@ export function Header() {
                 className="h-14 w-14 rounded-full object-cover"
                 priority
               />
-            </a>
+            </Link>
             <a
               href={siteConfig.parentUrl}
               className="hidden text-xs text-gray transition-colors hover:text-white sm:block"
@@ -32,15 +80,19 @@ export function Header() {
           </div>
 
           <nav className="hidden items-center gap-8 lg:flex">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-sm font-medium text-gray transition-colors hover:text-white"
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) =>
+              item.children ? (
+                <DesktopDropdown key={item.href} item={item} isHome={isHome} />
+              ) : (
+                <a
+                  key={item.href}
+                  href={resolveHref(item.href, isHome)}
+                  className="text-sm font-medium text-gray transition-colors hover:text-white"
+                >
+                  {item.label}
+                </a>
+              )
+            )}
           </nav>
 
           <div className="flex items-center gap-6">
@@ -69,6 +121,7 @@ export function Header() {
         open={mobileOpen}
         onClose={() => setMobileOpen(false)}
         links={navItems}
+        isHome={isHome}
       />
     </>
   );
