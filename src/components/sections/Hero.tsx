@@ -3,7 +3,7 @@ import { IconCircle } from "@/components/IconCircle";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[100svh] sm:min-h-[80vh] items-center justify-center border-b border-border overflow-hidden">
+    <section className="relative flex min-h-[60svh] sm:min-h-[80vh] items-center justify-center border-b border-border overflow-hidden">
       <Image
         src="/images/hero-bg.png"
         alt=""
