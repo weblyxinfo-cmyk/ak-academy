@@ -61,7 +61,7 @@ export default function LektoriPage() {
               <a
                 href="https://www.akbarber.com"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="text-accent underline underline-offset-2 hover:text-white"
               >
                 AK Barbers

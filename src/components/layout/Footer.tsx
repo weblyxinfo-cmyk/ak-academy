@@ -32,7 +32,7 @@ export function Footer() {
               <a
                 href={siteConfig.social.facebook}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-gray transition-colors hover:text-white"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
@@ -43,7 +43,7 @@ export function Footer() {
               <a
                 href={siteConfig.social.instagram}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-gray transition-colors hover:text-white"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
@@ -109,7 +109,7 @@ export function Footer() {
             <a
               href="https://www.weblyx.cz"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="group/wlx inline-flex items-center gap-1.5 rounded-md border border-border bg-white/[0.03] px-2.5 py-1 text-[10px] tracking-wider text-gray/40 transition-all hover:border-gray-light/30 hover:text-gray"
             >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3">
@@ -120,13 +120,13 @@ export function Footer() {
             </a>
           </div>
           <div className="flex flex-wrap gap-6">
-            <a href={siteConfig.parentUrl} className="text-xs text-gray transition-colors hover:text-white">
+            <a href={siteConfig.parentUrl} rel="nofollow noopener noreferrer" target="_blank" className="text-xs text-gray transition-colors hover:text-white">
               AK BARBERS
             </a>
-            <a href={siteConfig.legal.cookies} target="_blank" rel="noopener noreferrer" className="text-xs text-gray transition-colors hover:text-white">
+            <a href={siteConfig.legal.cookies} target="_blank" rel="nofollow noopener noreferrer" className="text-xs text-gray transition-colors hover:text-white">
               Zásady používání souborů cookie
             </a>
-            <a href={siteConfig.legal.privacy} target="_blank" rel="noopener noreferrer" className="text-xs text-gray transition-colors hover:text-white">
+            <a href={siteConfig.legal.privacy} target="_blank" rel="nofollow noopener noreferrer" className="text-xs text-gray transition-colors hover:text-white">
               Prohlášení o ochraně osobních údajů
             </a>
           </div>
