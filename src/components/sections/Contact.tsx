@@ -108,7 +108,7 @@ export function Contact() {
                 </div>
               </div>
 
-              <div className="overflow-hidden rounded-lg">
+              <div className="overflow-hidden rounded-lg" style={{ filter: "invert(1) hue-rotate(180deg) brightness(0.9) contrast(1.1)" }}>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.1234!2d14.4208!3d50.0755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDA0JzMxLjgiTiAxNMKwMjUnMTUuMCJF!5e0!3m2!1scs!2scz!4v1234567890"
                   width="100%"
