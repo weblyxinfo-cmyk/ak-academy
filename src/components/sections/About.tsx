@@ -41,25 +41,30 @@ export function About() {
           </p>
         </div>
 
-        <div className="mx-auto mt-14 max-w-5xl">
+        <div className="mx-auto mt-14 max-w-4xl">
           <h3 className="text-center text-2xl font-bold text-white">
             Kde nás najdete
           </h3>
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {branches.map((b, i) => (
               <div
                 key={i}
-                className="group flex flex-col items-center gap-2 rounded-xl border border-accent/30 bg-accent/10 px-4 py-5 text-center shadow-[0_0_15px_rgba(46,184,166,0.1)] transition-all duration-300 hover:border-accent/50 hover:bg-accent/15 hover:shadow-[0_0_25px_rgba(46,184,166,0.25)]"
+                className="group relative overflow-hidden rounded-xl border border-border bg-bg-card p-5 transition-all duration-300 hover:border-accent/40 hover:shadow-[0_0_20px_rgba(46,184,166,0.15)]"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/20 transition-colors duration-300 group-hover:bg-accent/30">
-                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1" className="h-5 w-5 text-accent">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" fill="#000" stroke="none" />
-                  </svg>
+                <div className="absolute right-0 top-0 h-1 w-full bg-gradient-to-r from-transparent via-accent/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/15">
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-accent">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" fill="#141414" stroke="none" />
+                    </svg>
+                  </div>
+                  <div className="min-w-0">
+                    <p className="font-semibold text-white">{b.city}</p>
+                    <p className="mt-1 text-sm text-gray">{b.address}</p>
+                    <p className="text-sm text-gray-light">{b.zip}</p>
+                  </div>
                 </div>
-                <span className="text-sm font-semibold text-white">{b.city}</span>
-                <span className="text-xs leading-tight text-gray">{b.address}</span>
-                <span className="text-xs text-gray/70">{b.zip}</span>
               </div>
             ))}
           </div>
