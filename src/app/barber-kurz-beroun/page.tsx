@@ -173,6 +173,130 @@ export default function BarberKurzBerounPage() {
         </div>
       </section>
 
+      {/* Beroun – soustředěná výuka v klidném prostředí */}
+      <section className="border-b border-border py-16 md:py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl px-4">
+            <SectionHeading title="Beroun – soustředěná výuka v klidném prostředí" />
+            <div className="mx-auto mt-10 max-w-3xl space-y-5">
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Beroun je malebné město na soutoku Berounky a Litavky, obklopené přírodou Českého krasu.
+                Právě toto prostředí z něj dělá ideální místo pro soustředěné studium barber řemesla.
+                Žádný velkoměstský shon, žádné rušivé elementy – jen vy, strojek a praktická výuka pod
+                vedením zkušených{" "}
+                <Link href="/lektori" className="text-accent underline underline-offset-4 hover:text-white">
+                  lektorů AK BARBERS Academy
+                </Link>
+                .
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Beroun leží pouhých 30 minut vlakem od Prahy na hlavní trati Praha – Plzeň. Vlaky jezdí
+                v pravidelných intervalech po celý den, takže dojíždění je naprosto bezproblémové.
+                Pro studenty z Prahy, kteří hledají klidnější alternativu k naší rušné pobočce na Národní
+                třídě, je Beroun skvělou volbou – přitom stále v pohodlném dosahu hlavního města.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Historie Berouna sahá až do 13. století a město si dodnes zachovalo přátelskou atmosféru
+                královského města. Studenti zde oceňují osobnější přístup, který se ve velkém městě
+                těžko hledá. Berounské pobočky jsou ideální pro ty, kdo chtějí během kurzu skutečně
+                vypnout od běžného shonu a plně se ponořit do učení nového řemesla.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Po absolvování kurzu můžete hledat uplatnění nejen v Berouně, ale i v širším okolí – na
+                Příbramsku, Kladensku či přímo v Praze. Certifikát AK Barbers Academy je uznávaný po celé
+                České republice a naši absolventi nacházejí práci v barbershopech po celých Čechách.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dvě pobočky v centru Berouna */}
+      <section className="border-b border-border py-16 md:py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl px-4">
+            <SectionHeading title="Dvě pobočky v centru Berouna" subtitle="Havlíčkova a Plzeňská ulice" />
+            <div className="mx-auto mt-10 max-w-3xl space-y-5">
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                V Berouně provozujeme dvě pobočky, obě v centru města. První se nachází na adrese{" "}
+                <strong className="text-white">Havlíčkova 128</strong>, přibližně 10 minut chůze od
+                vlakového nádraží. Tato pobočka je naší hlavní berounskou základnou s kompletním vybavením
+                pro všechny typy kurzů. V okolí najdete několik restaurací a kaváren vhodných pro
+                oběd – oblíbené jsou zejména podniky na nedalekém Husově náměstí.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Druhá pobočka na adrese{" "}
+                <strong className="text-white">Plzeňská 145/49</strong> se nachází přímo na hlavní ulici
+                v centru Berouna. Leží na frekventované trase, což je výhodné pro práci s reálnými
+                zákazníky – walk-in klienti sem chodí pravidelně a studenti tak získávají cennou praxi
+                v reálném provozu barbershopu. V blízkosti jsou obchody, lékárna i parkovací místa
+                pro studenty, kteří přijíždějí autem.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Obě pobočky jsou plně vybavené profesionálním barber nábytkem, zrcadly, křesly a veškerým
+                nářadím potřebným pro výuku. Studenti si nemusí kupovat vlastní vybavení – vše je
+                k dispozici přímo na místě. Mezi pobočkami je pouhých několik minut chůze, takže se
+                během kurzu můžete pohybovat mezi oběma podle aktuálního rozvrhu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ideální pro studenty z okolí Prahy */}
+      <section className="border-b border-border py-16 md:py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl px-4">
+            <SectionHeading title="Ideální pro studenty z okolí Prahy" />
+            <div className="mx-auto mt-10 max-w-3xl space-y-5">
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Berounská pobočka je strategicky umístěna pro studenty ze širokého okolí. Pokud bydlíte
+                na Příbramsku, Hořovicku, Kladensku nebo Rakovnicku, Beroun je pro vás pravděpodobně
+                nejdostupnější pobočka AK BARBERS Academy. Vlakové a autobusové spojení do Berouna je
+                výborné ze všech okolních měst.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Pro studenty z jižní a západní části Středočeského kraje je Beroun výrazně pohodlnější
+                než cesta do centra Prahy. Z Příbrami se do Berouna dostanete za cca 40 minut autobusem,
+                z Hořovic za 15 minut vlakem, z Rakovníka za 45 minut. Nemusíte řešit pražskou dopravu,
+                přeplněné metro ani drahé parkování.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                I pro studenty přímo z Prahy může být Beroun zajímavou alternativou. Vlak z Prahy hlavního
+                nádraží jede pouhých 30 minut a cesta je pohodlná – můžete si cestou opakovat teorii
+                nebo sledovat tutoriály. Navíc v Berouně studujete v menší skupině a získáváte
+                intenzivnější pozornost od lektorů.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Vyberte si z naší nabídky{" "}
+                <Link href="/mesicni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                  měsíční kurz
+                </Link>,{" "}
+                <Link href="/dvoutydeni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                  dvoutýdenní intenziv
+                </Link>{" "}
+                nebo{" "}
+                <Link href="/jednodenni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                  jednodenní masterclass
+                </Link>{" "}
+                v Berouně. Další pobočky najdete v{" "}
+                <Link href="/barber-kurz-praha" className="text-accent underline underline-offset-4 hover:text-white">
+                  Praze
+                </Link>,{" "}
+                <Link href="/barber-kurz-plzen" className="text-accent underline underline-offset-4 hover:text-white">
+                  Plzni
+                </Link>{" "}
+                a{" "}
+                <Link href="/barber-kurz-slany" className="text-accent underline underline-offset-4 hover:text-white">
+                  Slaném
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Porovnání */}
       <section className="border-b border-border py-20">
         <div className="container">

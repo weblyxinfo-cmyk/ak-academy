@@ -172,6 +172,137 @@ export default function BarberKurzPrahaPage() {
         </div>
       </section>
 
+      {/* Praha – centrum českého barberingu */}
+      <section className="border-b border-border py-16 md:py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl px-4">
+            <SectionHeading title="Praha – centrum českého barberingu" />
+            <div className="mx-auto mt-10 max-w-3xl space-y-5">
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Praha je bezpochyby hlavním městem českého barberingu. Najdete tu nejvyšší koncentraci
+                barbershopů v celé republice – od prémiových salonů na Vinohradech a ve Starém Městě až po
+                trendy podniky na Žižkově a Letné. Právě tato rozmanitost dělá z Prahy ideální místo, kde
+                se stát barberem. Během studia na AK BARBERS Academy v Praze budete obklopeni pulzující
+                barber kulturou, která vás bude motivovat a inspirovat k vlastnímu růstu.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Jednou z největších výhod studia v Praze je přístup k mezinárodní klientele. Praha jako
+                turistická metropole přitahuje zákazníky z celého světa – naučíte se komunikovat s klienty
+                různých národností a pracovat s rozmanitými typy vlasů a vousů. Tato zkušenost je
+                neocenitelná, pokud plánujete kariéru v zahraničí nebo v prémiových salonech.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Networking je další silnou stránkou pražské scény. Během kurzu se potkáte s dalšími studenty,
+                aktivními barbery i majiteli barbershopů. Mnoho našich absolventů získalo první pracovní
+                nabídku právě díky kontaktům navázaným během studia. Praha také pravidelně hostí barber
+                eventy, soutěže a workshopy, kde můžete sledovat nejlepší barbery v akci.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Po absolvování kurzu máte v Praze nejširší možnosti uplatnění – desítky barbershopů aktivně
+                hledají kvalifikované barbery a poptávka stále převyšuje nabídku. Ať už chcete nastoupit
+                do zavedného salonu, nebo si otevřít vlastní podnikání, Praha vám dává nejlepší startovní
+                pozici. Podívejte se na naše{" "}
+                <Link href="/mesicni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                  kurzy
+                </Link>{" "}
+                a začněte svou cestu k úspěšné barber kariéře.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Okolí naší pobočky */}
+      <section className="border-b border-border py-16 md:py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl px-4">
+            <SectionHeading title="Okolí naší pobočky" subtitle="Národní třída, Praha 1" />
+            <div className="mx-auto mt-10 max-w-3xl space-y-5">
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Naše hlavní pobočka na adrese Národní 949/19 se nachází přímo v srdci Prahy, na jedné
+                z nejznámějších ulic hlavního města. Stanice metra Národní třída (linka B) je doslova
+                minutu chůze od vstupu do budovy, což činí dojíždění maximálně pohodlným z jakéhokoli
+                koutu Prahy. Na Národní třídě zastavují i tramvajové linky 2, 9, 18, 22 a další, takže
+                se k nám dostanete opravdu odkudkoli.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                V bezprostředním okolí pobočky najdete vše, co během studia potřebujete. Na oběd si můžete
+                zajít do některé z desítek restaurací a kaváren na Národní třídě a v přilehlých uličkách –
+                od rychlého občerstvení přes bistro jídla až po tradiční českou kuchyni. V okolí jsou
+                i obchody, lékárna a oblíbená kavárna přímo na rohu. Studenti často využívají přestávky
+                k procházce podél Vltavy, která je vzdálená pouhé dvě minuty.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Druhá pražská pobočka na Bělohorské 1393/44 v Praze 6 je dostupná tramvají č. 22 (zastávka
+                Malovanka). Tato pobočka nabízí klidnější atmosféru a je ideální pro studenty z Prahy 6,
+                Dejvic, Střešovic a okolí. Obě pobočky jsou plně vybavené profesionálním barber nábytkem
+                a nářadím značek BaByliss, Wahl a Andis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Absolventi z Prahy */}
+      <section className="border-b border-border py-16 md:py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl px-4">
+            <SectionHeading title="Absolventi z Prahy" subtitle="Kam to dotáhli naši studenti" />
+            <div className="mx-auto mt-10 max-w-3xl space-y-8">
+              <div className="rounded-xl border border-[#2a2a2a] bg-[#141414] p-6">
+                <p className="text-sm italic leading-relaxed text-[#999] sm:text-base">
+                  &ldquo;Po absolvování měsíčního kurzu na Národní jsem dostal nabídku hned ze dvou
+                  barbershopů na Vinohradech. Dnes mám vlastní křeslo a stálou klientelu. Bez AK Academy
+                  bych si na to netroufnul.&rdquo;
+                </p>
+                <p className="mt-3 text-sm font-semibold text-white">— Martin K., absolvent 2024</p>
+              </div>
+              <div className="rounded-xl border border-[#2a2a2a] bg-[#141414] p-6">
+                <p className="text-sm italic leading-relaxed text-[#999] sm:text-base">
+                  &ldquo;Přešla jsem z dámského kadeřnictví na barbering a dvoutýdenní intenzivní kurz
+                  mi dal přesně to, co jsem potřebovala. Fade techniky, práci s břitvou, sebevědomí.
+                  Teď pracuji v barber studiu na Letné a baví mě to víc než kdy dřív.&rdquo;
+                </p>
+                <p className="mt-3 text-sm font-semibold text-white">— Tereza S., absolventka 2024</p>
+              </div>
+              <div className="rounded-xl border border-[#2a2a2a] bg-[#141414] p-6">
+                <p className="text-sm italic leading-relaxed text-[#999] sm:text-base">
+                  &ldquo;Jednodenní masterclass na skin fade mi otevřel oči. Za jeden den jsem se naučil
+                  techniky, na které bych sám přišel za měsíce pokusů. Jednoznačně doporučuji i zkušeným
+                  barberům.&rdquo;
+                </p>
+                <p className="mt-3 text-sm font-semibold text-white">— David R., absolvent 2025</p>
+              </div>
+              <p className="text-center text-sm leading-relaxed text-[#999] sm:text-base">
+                Chcete se přidat k desítkám úspěšných absolventů? Vyberte si{" "}
+                <Link href="/mesicni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                  měsíční kurz
+                </Link>,{" "}
+                <Link href="/dvoutydeni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                  dvoutýdenní intenziv
+                </Link>{" "}
+                nebo{" "}
+                <Link href="/jednodenni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                  jednodenní masterclass
+                </Link>{" "}
+                a začněte svou barber kariéru v Praze. Nebo zvažte studium v{" "}
+                <Link href="/barber-kurz-plzen" className="text-accent underline underline-offset-4 hover:text-white">
+                  Plzni
+                </Link>,{" "}
+                <Link href="/barber-kurz-beroun" className="text-accent underline underline-offset-4 hover:text-white">
+                  Berouně
+                </Link>{" "}
+                či{" "}
+                <Link href="/barber-kurz-slany" className="text-accent underline underline-offset-4 hover:text-white">
+                  Slaném
+                </Link>{" "}
+                – kvalita výuky je na všech pobočkách stejná.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Porovnání */}
       <section className="border-b border-border py-20">
         <div className="container">

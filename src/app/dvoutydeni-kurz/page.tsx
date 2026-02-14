@@ -85,6 +85,93 @@ export default function DvoutydeniKurzPage() {
         </div>
       </section>
 
+      {/* Proč si vybrat 2týdenní kurz */}
+      <section className="border-b border-border py-20">
+        <div className="container">
+          <SectionHeading title="Proč si vybrat 2týdenní kurz" subtitle="Čtyři důvody, proč je intenzivní formát ideální volbou" />
+          <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
+            <div className="rounded-lg border border-border bg-bg-card p-6">
+              <h3 className="text-lg font-semibold text-accent">Časová efektivita</h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray">
+                Ne každý si může dovolit měsíc denní docházky. Dvoutýdenní formát vám dá to nejdůležitější za polovinu času. Program je navržen tak, aby eliminoval zbytečné opakování a zaměřil se na techniky, které reálně využijete v praxi. Za 90 hodin zvládnete to, co jiné kurzy učí za tři měsíce.
+              </p>
+            </div>
+            <div className="rounded-lg border border-border bg-bg-card p-6">
+              <h3 className="text-lg font-semibold text-accent">Zaměřený curriculum</h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray">
+                Na rozdíl od{" "}
+                <Link href="/mesicni-kurz" className="text-accent underline underline-offset-2 hover:text-white">měsíčního kurzu</Link>
+                , který začíná od naprostých základů, 2týdenní program předpokládá, že už víte, jak držet nůžky. Zaměřujeme se přímo na moderní barber techniky – fade, přechody, vousy a styling – bez zbytečného úvodu.
+              </p>
+            </div>
+            <div className="rounded-lg border border-border bg-bg-card p-6">
+              <h3 className="text-lg font-semibold text-accent">Ideální pro kariérní změnu</h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray">
+                Jste kadeřník nebo kadeřnice a chcete přidat barber služby? Nebo se učíte sami a chcete formální vzdělání? 2týdenní kurz je navržen přesně pro tyto situace – přemostí vaše stávající dovednosti s profesionálním barber standardem.
+              </p>
+            </div>
+            <div className="rounded-lg border border-border bg-bg-card p-6">
+              <h3 className="text-lg font-semibold text-accent">Praxe na zákaznících</h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray">
+                Už v druhém týdnu pracujete na reálných zákaznících v barbershopu. Tohle je klíčový rozdíl oproti online kurzům nebo školením, která probíhají jen na cvičných hlavách. Odcházíte s reálnou zkušeností a sebedůvěrou pro samostatnou práci.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Intenzivní program den po dni */}
+      <section className="border-b border-border py-20">
+        <div className="container">
+          <SectionHeading title="Intenzivní program den po dni" subtitle="Co vás čeká každý den během dvou týdnů intenzivního tréninku" />
+          <div className="mx-auto mt-12 max-w-4xl">
+            <div className="space-y-4">
+              <h3 className="text-lg font-bold text-white">Týden 1 – Techniky stříhání a fade</h3>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+                {[
+                  { day: "Po", title: "Orientace a základy", desc: "Seznámení s týmem, rekapitulace základů stříhání, ergonomie a nástroje." },
+                  { day: "Út", title: "Low & mid fade", desc: "Teorie přechodů, live demonstrace a trénink low fade a mid fade na cvičných hlavách." },
+                  { day: "St", title: "High & skin fade", desc: "Pokročilé fade techniky včetně skin fade. Práce s foil shaverem a detailním trimmerem." },
+                  { day: "Čt", title: "Scissor work", desc: "Scissor over comb, texturizace, point cutting a moderní pánské účesy nůžkami." },
+                  { day: "Pá", title: "Speciální techniky", desc: "Drop fade, burst fade, taper a blending. Review celého týdne a individuální zpětná vazba." },
+                ].map((item) => (
+                  <div key={item.day} className="rounded-lg border border-border p-4">
+                    <span className="text-xs font-bold text-accent">{item.day}</span>
+                    <h4 className="mt-1 text-sm font-semibold text-white">{item.title}</h4>
+                    <p className="mt-1 text-xs leading-relaxed text-gray">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="mt-8 space-y-4">
+              <h3 className="text-lg font-bold text-white">Týden 2 – Vousy, styling a praxe</h3>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+                {[
+                  { day: "Po", title: "Vousy a design", desc: "Tvarování vousů, symetrie, linky a práce s trimmerem na konturách." },
+                  { day: "Út", title: "Holení břitvou", desc: "Bezpečné holení břitvou, hot towel shave a péče o pokožku po holení." },
+                  { day: "St", title: "Styling & finishing", desc: "Práce s produkty – pomáda, hlína, vosk. Foukání a styling pro různé účesy." },
+                  { day: "Čt", title: "Praxe na zákaznících", desc: "Celý den stříhání reálných zákazníků pod dohledem lektora. Konzultace a komunikace." },
+                  { day: "Pá", title: "Zkouška a certifikace", desc: "Závěrečný střih, hodnocení od lektora, certifikát AK Barbers Academy a networking." },
+                ].map((item) => (
+                  <div key={item.day} className="rounded-lg border border-border p-4">
+                    <span className="text-xs font-bold text-accent">{item.day}</span>
+                    <h4 className="mt-1 text-sm font-semibold text-white">{item.title}</h4>
+                    <p className="mt-1 text-xs leading-relaxed text-gray">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <p className="mt-8 text-center text-sm text-gray">
+              Chcete ještě hlubší vzdělání? Náš{" "}
+              <Link href="/mesicni-kurz" className="text-accent underline underline-offset-2 hover:text-white">měsíční kurz (180 hodin)</Link>
+              {" "}pokrývá vše od úplných základů po podnikání v barberingu. Nebo si vyzkoušejte{" "}
+              <Link href="/jednodenni-kurz" className="text-accent underline underline-offset-2 hover:text-white">jednodenní masterclass</Link>
+              {" "}pro ochutnávku naší výuky.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Pro koho je kurz */}
       <section className="border-b border-border py-20">
         <div className="container">

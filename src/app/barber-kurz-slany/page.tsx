@@ -174,6 +174,131 @@ export default function BarberKurzSlanyPage() {
         </div>
       </section>
 
+      {/* Slaný – osobní přístup a rodinná atmosféra */}
+      <section className="border-b border-border py-16 md:py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl px-4">
+            <SectionHeading title="Slaný – osobní přístup a rodinná atmosféra" />
+            <div className="mx-auto mt-10 max-w-3xl space-y-5">
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Slaný je historické královské město s bohatou tradicí a přátelskou atmosférou, která se
+                promítá i do naší pobočky AK BARBERS Academy. Na rozdíl od velkoměstských poboček zde
+                panuje téměř rodinná atmosféra – studenti i lektoři se rychle poznají osobně, což vytváří
+                jedinečné studijní prostředí založené na důvěře a otevřené komunikaci.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Výhodou menšího města je přirozeně osobnější přístup. Naši{" "}
+                <Link href="/lektori" className="text-accent underline underline-offset-4 hover:text-white">
+                  lektoři
+                </Link>{" "}
+                na slánské pobočce mají možnost věnovat se každému studentovi skutečně individuálně.
+                Znají vaše silné stránky i oblasti, kde potřebujete více praxe, a přizpůsobují tomu
+                zpětnou vazbu i tempo výuky. Mnoho našich studentů právě tuto osobní pozornost hodnotí
+                jako klíčový faktor svého rychlého pokroku.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Slaný leží ve Středočeském kraji severozápadně od Prahy a je přirozeným centrem pro studenty
+                z Kladenska, Rakovnicka a Lounska. Město nabízí veškerou potřebnou občanskou vybavenost –
+                restaurace, obchody, ubytování – a zároveň si zachovává klid a pohodu, které ve velkoměstě
+                nenajdete. Pro studenty, kteří preferují studium bez stresu a rušivých vlivů, je Slaný
+                ideální volbou.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Po absolvování kurzu ve Slaném získáte stejný certifikát AK Barbers Academy jako na
+                kterékoli jiné pobočce. Naši absolventi ze Slaného úspěšně pracují v barbershopech po celém
+                Středočeském kraji i v Praze. Kvalita vzdělání se neměří velikostí města, ale kvalitou
+                výuky – a ta je na všech našich pobočkách stejně vysoká.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dostupnost a okolí */}
+      <section className="border-b border-border py-16 md:py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl px-4">
+            <SectionHeading title="Dostupnost a okolí" subtitle="Třebízského 182, Slaný" />
+            <div className="mx-auto mt-10 max-w-3xl space-y-5">
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Naše pobočka ve Slaném se nachází na adrese Třebízského 182, pouhých 5 minut chůze od
+                vlakového nádraží Slaný. Vlakové spojení z Prahy (přes Kladno) trvá přibližně hodinu
+                a vlaky jezdí v pravidelných intervalech. Pro studenty, kteří přijíždějí autem, je
+                v okolí pobočky dostatek bezplatných parkovacích míst – žádné parkovací zóny ani
+                placené parkování.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Autobusové spojení je rovněž výborné – ze slánského autobusového nádraží (vzdáleného
+                pár minut chůze) jezdí pravidelné linky do Prahy, Kladna, Loun i Rakovníka. Studenti
+                z těchto měst se k nám dostanou pohodlně a bez nutnosti přestupovat.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                V bezprostředním okolí pobočky najdete vše potřebné pro pohodlné studium. Na Masarykově
+                náměstí, které je nedaleko, jsou restaurace, kavárny a obchody. Oblíbená je místní
+                pizzerie a tradiční hospoda s denním menu za přátelské ceny. Supermarket i lékárna
+                jsou v docházkové vzdálenosti. Studenti také oceňují klidné prostředí centra Slaného,
+                kde si o přestávkách mohou v klidu odpočinout.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Menší skupina, větší pokrok */}
+      <section className="border-b border-border py-16 md:py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl px-4">
+            <SectionHeading title="Menší skupina, větší pokrok" />
+            <div className="mx-auto mt-10 max-w-3xl space-y-5">
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Největší výhodou slánské pobočky je velikost skupin. Zatímco na pražské pobočce bývají
+                kurzy plně obsazené, ve Slaném pracujeme s menšími skupinami, což přináší zásadní rozdíl
+                v kvalitě výuky. Každý student dostane více času s lektorem, více zpětné vazby a více
+                prostoru pro individuální dotazy.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Menší skupina znamená také více příležitostí k praktickému tréninku. Nemusíte čekat, až
+                na vás přijde řada – křesla jsou k dispozici a lektoři mohou sledovat vaši práci
+                v reálném čase a okamžitě korigovat techniku. Tento intenzivní přístup se projeví na
+                rychlosti vašeho pokroku. Studenti z menších poboček často dosahují stejné úrovně
+                dovedností za kratší dobu než jejich kolegové z velkých skupin.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Rodinná atmosféra slánské pobočky vytváří prostředí, kde se studenti nebojí ptát, zkoušet
+                nové věci a dělat chyby – protože právě z chyb se člověk učí nejrychleji. Naši lektoři
+                tento přístup aktivně podporují a vytvářejí bezpečné prostředí pro experimentování
+                s novými technikami.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Začněte svou barber kariéru ve Slaném – vyberte si{" "}
+                <Link href="/mesicni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                  měsíční kurz
+                </Link>,{" "}
+                <Link href="/dvoutydeni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                  dvoutýdenní intenziv
+                </Link>{" "}
+                nebo{" "}
+                <Link href="/jednodenni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                  jednodenní masterclass
+                </Link>
+                . Kurzy nabízíme i v{" "}
+                <Link href="/barber-kurz-praha" className="text-accent underline underline-offset-4 hover:text-white">
+                  Praze
+                </Link>,{" "}
+                <Link href="/barber-kurz-plzen" className="text-accent underline underline-offset-4 hover:text-white">
+                  Plzni
+                </Link>{" "}
+                a{" "}
+                <Link href="/barber-kurz-beroun" className="text-accent underline underline-offset-4 hover:text-white">
+                  Berouně
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Porovnání */}
       <section className="border-b border-border py-20">
         <div className="container">

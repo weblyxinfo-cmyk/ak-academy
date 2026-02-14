@@ -79,6 +79,99 @@ export default function MesicniKurzPage() {
         </div>
       </section>
 
+      {/* Jak probíhá typický den v kurzu */}
+      <section className="border-b border-border py-20">
+        <div className="container">
+          <div className="mx-auto max-w-3xl">
+            <SectionHeading title="Jak probíhá typický den v kurzu" subtitle="Každý den je naplánován tak, aby maximalizoval vaše učení a praxi" />
+            <div className="mt-10 space-y-6 text-base leading-relaxed text-gray">
+              <p>
+                Výuka začíná každé ráno v <strong className="text-white">9:00 teoretickým blokem</strong>, kde lektor představí techniku dne – vysvětlí principy, ukáže anatomické souvislosti a zodpoví dotazy z předchozího dne. Teorie trvá přibližně hodinu a je doplněna vizuálními pomůckami, diagramy a ukázkami na cvičných hlavách. Důraz klademe na to, abyste rozuměli nejen „jak", ale i „proč" – to vás odliší od barberů, kteří se učili pouze napodobováním.
+              </p>
+              <p>
+                Kolem <strong className="text-white">10:00 přichází live demonstrace</strong>, kde lektor předvede kompletní postup na modelu nebo cvičné hlavě. Můžete se ptát, přistoupit blíž a sledovat každý detail. Naši{" "}
+                <Link href="/lektori" className="text-accent underline underline-offset-2 hover:text-white">lektoři</Link>
+                {" "}mají desítky let praxe a dokáží srozumitelně vysvětlit i ty nejsložitější techniky. Demonstrace trvá 45–60 minut a vždy zahrnuje komentář ke každému kroku.
+              </p>
+              <p>
+                Dopolední praktický blok od <strong className="text-white">11:00 do 13:00</strong> je věnován tréninku na cvičných hlavách. Každý student pracuje samostatně a lektor obchází, koriguje a radí. Tady si budujete svalovou paměť a jistotu v pohybech. Pracujeme v malých skupinách 6–8 studentů, takže se vám lektor může věnovat individuálně.
+              </p>
+              <p>
+                Po obědové pauze následuje <strong className="text-white">odpolední blok od 14:00 do 17:00</strong>, který je od třetího týdne zaměřen na práci s reálnými zákazníky. Ti přicházejí přímo do{" "}
+                <Link href="/barber-kurz-praha" className="text-accent underline underline-offset-2 hover:text-white">barbershopu na pobočce</Link>
+                {" "}a vy je stříháte pod přímým dohledem lektora. Právě tento prvek odlišuje AK Academy od většiny barber kurzů v ČR – neučíte se jen na plastových hlavách, ale na skutečných lidech s reálnými vlasy a přáními.
+              </p>
+              <p>
+                Den zakončuje <strong className="text-white">závěrečný review od 17:00</strong>, kde celá skupina rozebere, co se povedlo a co je potřeba zlepšit. Lektor dá každému individuální zpětnou vazbu a zadá doporučení na další den. Tento strukturovaný přístup zajišťuje, že každý den navazuje na předchozí a vaše dovednosti rostou konzistentně.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Co se naučíš – grid dovedností */}
+      <section className="border-b border-border py-20">
+        <div className="container">
+          <SectionHeading title="Co se naučíš" subtitle="Konkrétní dovednosti, které ovládnete po absolvování měsíčního kurzu" />
+          <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { skill: "Fade techniky", desc: "Low fade, mid fade, high fade, skin fade, drop fade a burst fade – ovládnete všechny varianty přechodů se strojkem i nůžkami." },
+              { skill: "Taper a blending", desc: "Plynulé přechody mezi délkami, práce s různými nástavci a přesné napojení na kontury hlavy a krku." },
+              { skill: "Scissor over comb", desc: "Klasická technika stříhání nůžkami přes hřeben pro přirozenější výsledek a větší kontrolu nad délkou." },
+              { skill: "Tvarování vousů", desc: "Design, symetrie a tvarování vousů včetně linek, přechodů a práce s břitvou na konturách." },
+              { skill: "Hot towel shave", desc: "Kompletní rituál klasického holení – příprava pokožky, horký ručník, holení břitvou a péče po holení." },
+              { skill: "Styling a finishing", desc: "Práce s pomádou, hlínou, voskem, sprejem a dalšími produkty. Naučíte se vybrat správný produkt pro každý typ vlasů." },
+              { skill: "Komunikace se zákazníkem", desc: "Profesionální konzultace – analýza tvaru obličeje, doporučení střihu a budování dlouhodobého vztahu s klientem." },
+              { skill: "Kreativní designy", desc: "Hair tattoo, linie, parting a další kreativní prvky, které oživí každý střih a odliší vás od konkurence." },
+              { skill: "Podnikání v barberingu", desc: "Základy živnostenského podnikání, cenotvorba, marketing a budování osobního brandu na sociálních sítích." },
+            ].map((item) => (
+              <div key={item.skill} className="rounded-lg border border-border bg-bg-card p-5">
+                <h3 className="font-semibold text-accent">{item.skill}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-gray">
+            Chcete se zaměřit jen na vybrané techniky? Zvažte náš{" "}
+            <Link href="/dvoutydeni-kurz" className="text-accent underline underline-offset-2 hover:text-white">2týdenní intenzivní kurz</Link>
+            {" "}nebo{" "}
+            <Link href="/jednodenni-kurz" className="text-accent underline underline-offset-2 hover:text-white">jednodenní masterclass</Link>
+            {" "}zaměřenou na jednu konkrétní dovednost.
+          </p>
+        </div>
+      </section>
+
+      {/* Kariérní vyhlídky po absolvování */}
+      <section className="border-b border-border py-20">
+        <div className="container">
+          <div className="mx-auto max-w-3xl">
+            <SectionHeading title="Kariérní vyhlídky po absolvování" subtitle="Co dělají naši absolventi a kam je kurz posunul" />
+            <div className="mt-10 space-y-6 text-base leading-relaxed text-gray">
+              <p>
+                Absolvování měsíčního kurzu vám otevírá dveře k několika kariérním cestám. Mnozí naši absolventi nastupují přímo do <strong className="text-white">prémiových barbershopů</strong> po celé České republice – a nejlepší z nich dostávají nabídku přímo od AK Barbers. Poptávka po kvalifikovaných barberech neustále roste a s certifikátem AK Academy máte významnou konkurenční výhodu na trhu práce.
+              </p>
+              <p>
+                Řada absolventů se rozhodne pro <strong className="text-white">vlastní podnikání</strong>. Měsíční kurz vás na to připraví nejen po řemeslné stránce, ale i v oblasti podnikání – od živnostenského listu přes cenotvorbu až po marketing na sociálních sítích. Někteří naši absolventi si otevřeli barbershopy v{" "}
+                <Link href="/barber-kurz-praha" className="text-accent underline underline-offset-2 hover:text-white">Praze</Link>, {" "}
+                <Link href="/barber-kurz-plzen" className="text-accent underline underline-offset-2 hover:text-white">Plzni</Link>, {" "}
+                <Link href="/barber-kurz-beroun" className="text-accent underline underline-offset-2 hover:text-white">Berouně</Link>
+                {" "}a dalších městech.
+              </p>
+              <p>
+                Pro ambiciózní absolventy existuje i <strong className="text-white">mezinárodní kariéra</strong>. Barber dovednosti jsou univerzální a certifikát AK Academy je uznávaný i v zahraničí. Někteří naši absolventi pracují v Londýně, Dubaji nebo Berlíně. Naši{" "}
+                <Link href="/lektori" className="text-accent underline underline-offset-2 hover:text-white">lektoři</Link>
+                {" "}sami mají mezinárodní zkušenosti a mohou vás nasměrovat.
+              </p>
+              <p>
+                Nezapomínáme na vás ani po skončení kurzu. AK Academy nabízí <strong className="text-white">post-kurzovou podporu</strong> – můžete se na nás obrátit s dotazy, přijít na{" "}
+                <Link href="/jednodenni-kurz" className="text-accent underline underline-offset-2 hover:text-white">jednodenní masterclass</Link>
+                {" "}pro zdokonalení konkrétní techniky nebo využít naši síť kontaktů pro hledání práce.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pro koho je kurz */}
       <section className="border-b border-border py-20">
         <div className="container">

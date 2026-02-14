@@ -41,4 +41,29 @@ export const comparisonRows: ComparisonRow[] = [
     us: true,
     others: false,
   },
+  {
+    feature: "Splátky bez navýšení",
+    us: true,
+    others: false,
+  },
+  {
+    feature: "Praxe od prvního dne",
+    us: true,
+    others: "Až po teorii",
+  },
+  {
+    feature: "Pomoc s hledáním práce",
+    us: true,
+    others: false,
+  },
+  {
+    feature: "Opakování kurzu zdarma",
+    us: true,
+    others: false,
+  },
+  {
+    feature: "Mezinárodně uznávaný certifikát",
+    us: true,
+    others: "Pouze lokální",
+  },
 ];

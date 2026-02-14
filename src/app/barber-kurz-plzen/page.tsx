@@ -162,6 +162,139 @@ export default function BarberKurzPlzenPage() {
         </div>
       </section>
 
+      {/* Plzeň – kvalitní výuka bez stresu velkoměsta */}
+      <section className="border-b border-border py-16 md:py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl px-4">
+            <SectionHeading title="Plzeň – kvalitní výuka bez stresu velkoměsta" />
+            <div className="mx-auto mt-10 max-w-3xl space-y-5">
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Plzeňská barber scéna prožívá v posledních letech dynamický rozvoj. Město, známé především
+                díky svému pivovarskému dědictví, se stává stále atraktivnějším místem pro moderní pánskou
+                péči. Počet barbershopů v Plzni za poslední tři roky vzrostl téměř dvojnásobně a poptávka
+                po kvalifikovaných barberech stále roste. Studiem v Plzni se připravíte na kariéru v regionu,
+                kde je konkurence menší, ale zákaznická základna loajální a stále se rozšiřující.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Oproti Praze nabízí Plzeň klidnější a soustředěnější studijní prostředí. Studenti se
+                nemusí potýkat se stresem velkoměstského dojíždění, hledáním parkování nebo přeplněnou MHD.
+                Pobočka na Gerské ulici je obklopena zelení a nabízí příjemnou atmosféru, ve které se
+                můžete plně soustředit na praktickou výuku. Menší město znamená i nižší náklady na
+                ubytování a stravu pro studenty, kteří dojíždějí z větší vzdálenosti.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Kvalita výuky na plzeňské pobočce je naprosto shodná s pražskou. Naši{" "}
+                <Link href="/lektori" className="text-accent underline underline-offset-4 hover:text-white">
+                  lektoři
+                </Link>{" "}
+                pravidelně rotují mezi pobočkami a přinášejí nejnovější trendy a techniky přímo z centra
+                dění. Používáme stejné profesionální vybavení značek BaByliss, Wahl a Andis a výuka
+                probíhá podle identických osnov jako v Praze – včetně praxe na reálných zákaznících od
+                prvního týdne.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Plzeň je také skvělou základnou pro barbery, kteří chtějí pracovat v rámci celého
+                Plzeňského kraje. Po absolvování kurzu můžete najít uplatnění nejen v Plzni samotné, ale
+                i v Klatovech, Rokycanech, Domažlicích či Sušici, kde kvalifikovaných barberů stále
+                není dostatek.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Okolí pobočky v Plzni */}
+      <section className="border-b border-border py-16 md:py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl px-4">
+            <SectionHeading title="Okolí pobočky v Plzni" subtitle="Gerská 2030/23, Plzeň 1-Bolevec" />
+            <div className="mx-auto mt-10 max-w-3xl space-y-5">
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Naše plzeňská pobočka se nachází na adrese Gerská 2030/23 v části Plzeň 1-Bolevec. Zastávka
+                trolejbusu č. 13 &ldquo;Gerská&rdquo; je pouhé 1 minutu chůze od vstupu do prostor akademie.
+                Z centra Plzně se sem dostanete za přibližně 15 minut MHD. Pro studenty, kteří přijíždějí
+                autem, je v okolí dostatek parkovacích míst – na rozdíl od centra Prahy zde parkování není
+                problém.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                V blízkém okolí najdete restaurace a rychlá občerstvení vhodná pro oběd během přestávky.
+                Oblíbená je zejména místní pizzerie a bistro vzdálené pár minut chůze. Pro milovníky
+                přírody je v docházkové vzdálenosti Bolevecký rybník – ideální místo na procházku
+                o polední pauze nebo po skončení výuky. Supermarket pro základní nákupy najdete necelých
+                5 minut od pobočky.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Plzeňský vlakový i autobusový nádraží jsou vzdáleny cca 20 minut MHD, takže pobočka je
+                pohodlně dostupná i pro studenty dojíždějící z Klatov, Rokycan, Stříbra či dalších měst
+                Plzeňského kraje. Pokud hledáte pobočku blíže k Praze, zvažte naše kurzy v{" "}
+                <Link href="/barber-kurz-beroun" className="text-accent underline underline-offset-4 hover:text-white">
+                  Berouně
+                </Link>{" "}
+                nebo přímo na{" "}
+                <Link href="/barber-kurz-praha" className="text-accent underline underline-offset-4 hover:text-white">
+                  pražské pobočce
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Proč studovat v Plzni místo Prahy */}
+      <section className="border-b border-border py-16 md:py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl px-4">
+            <SectionHeading title="Proč studovat v Plzni místo Prahy" />
+            <div className="mx-auto mt-10 max-w-3xl space-y-5">
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Mnoho studentů ze západních Čech zvažuje, zda se vydat na kurz do Prahy, nebo zůstat
+                v Plzni. Odpověď je jednoduchá: kvalita výuky je na obou pobočkách naprosto identická.
+                Stejní lektoři, stejné osnovy, stejné vybavení. Jediný rozdíl je v tom, že v Plzni ušetříte
+                čas, peníze a energii za dojíždění.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Náklady na život v Plzni jsou výrazně nižší než v Praze. Pokud potřebujete ubytování
+                na dobu kurzu, najdete v Plzni cenově dostupné penziony a podnájmy za zlomek pražských cen.
+                Obědy v okolí pobočky vás vyjdou levněji a nemusíte řešit drahé pražské MHD ani parkování
+                v centru.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Menší město také přináší méně rozptýlení. V Praze je lákadel mnoho – v Plzni se studenti
+                přirozeně více soustředí na studium a praktický trénink. Naši lektoři navíc potvrzují,
+                že menší skupiny na plzeňské pobočce umožňují věnovat každému studentovi více individuální
+                pozornosti.
+              </p>
+              <p className="text-sm leading-relaxed text-[#999] sm:text-base">
+                Přihlaste se na{" "}
+                <Link href="/mesicni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                  měsíční kurz
+                </Link>,{" "}
+                <Link href="/dvoutydeni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                  dvoutýdenní intenziv
+                </Link>{" "}
+                nebo{" "}
+                <Link href="/jednodenni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                  jednodenní masterclass
+                </Link>{" "}
+                v Plzni. Pokud vám přeci jen vyhovuje jiná lokalita, najdete nás i v{" "}
+                <Link href="/barber-kurz-praha" className="text-accent underline underline-offset-4 hover:text-white">
+                  Praze
+                </Link>,{" "}
+                <Link href="/barber-kurz-beroun" className="text-accent underline underline-offset-4 hover:text-white">
+                  Berouně
+                </Link>{" "}
+                a{" "}
+                <Link href="/barber-kurz-slany" className="text-accent underline underline-offset-4 hover:text-white">
+                  Slaném
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Porovnání */}
       <section className="border-b border-border py-20">
         <div className="container">

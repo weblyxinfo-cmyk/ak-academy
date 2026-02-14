@@ -76,6 +76,82 @@ export default function JednodennikurzPage() {
         </div>
       </section>
 
+      {/* Co stihneš za jeden den */}
+      <section className="border-b border-border py-20">
+        <div className="container">
+          <SectionHeading title="Co stihneš za jeden den" subtitle="Podrobný hodinový rozvrh masterclass od rána do večera" />
+          <div className="mx-auto mt-12 max-w-3xl">
+            <div className="space-y-6">
+              {[
+                { time: "8:30 – 9:00", title: "Registrace a welcome coffee", desc: "Přivítání, seznámení s lektorem a ostatními účastníky. Krátký úvod k tématu dne a rozdání materiálů." },
+                { time: "9:00 – 10:30", title: "Teoretický blok", desc: "Lektor představí techniku dne do hloubky – principy, anatomické souvislosti, typické chyby a jak se jim vyhnout. Prezentace s vizuálními ukázkami a prostor pro dotazy." },
+                { time: "10:30 – 12:00", title: "Live demonstrace", desc: "Lektor předvede kompletní postup na modelu. Můžete sledovat z bezprostřední blízkosti, ptát se a fotit si jednotlivé kroky. Komentář ke každému pohybu a rozhodnutí." },
+                { time: "12:00 – 13:00", title: "Oběd a networking", desc: "Společný oběd (v ceně workshopu) a neformální diskuze s lektorem i ostatními účastníky. Výměna zkušeností a kontaktů." },
+                { time: "13:00 – 15:30", title: "Hands-on trénink", desc: "Hlavní praktický blok – zkoušíte si techniku sami na cvičných hlavách nebo modelech pod vedením lektora. Individuální korekce a okamžitá zpětná vazba v reálném čase." },
+                { time: "15:30 – 17:00", title: "Pokročilé variace", desc: "Lektor ukáže pokročilé variace techniky a tipy pro různé typy vlasů. Druhá hands-on session zaměřená na detaily a fine-tuning vašeho provedení." },
+                { time: "17:00 – 18:00", title: "Q&A a závěr", desc: "Otevřená diskuze, zodpovězení všech zbývajících dotazů, tipy na další vzdělávání. Předání certifikátů AK Barbers Academy a společné foto." },
+              ].map((item) => (
+                <div key={item.time} className="flex gap-4 rounded-lg border border-border p-4">
+                  <span className="shrink-0 text-sm font-bold text-accent">{item.time}</span>
+                  <div>
+                    <h3 className="text-sm font-semibold text-white">{item.title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-gray">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="mt-8 text-center text-sm text-gray">
+              Chcete se ponořit hlouběji? Podívejte se na náš{" "}
+              <Link href="/dvoutydeni-kurz" className="text-accent underline underline-offset-2 hover:text-white">2týdenní intenzivní kurz</Link>
+              {" "}nebo{" "}
+              <Link href="/mesicni-kurz" className="text-accent underline underline-offset-2 hover:text-white">kompletní měsíční program</Link>
+              {" "}pro začátečníky.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Pro koho je masterclass ideální */}
+      <section className="border-b border-border py-20">
+        <div className="container">
+          <SectionHeading title="Pro koho je masterclass ideální" subtitle="Tři typické profily účastníků našich jednodenních workshopů" />
+          <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-3">
+            <div className="rounded-lg border border-border bg-bg-card p-6">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-accent/30 text-xl">
+                &#9986;
+              </div>
+              <h3 className="mt-4 font-semibold text-white">Zkušený barber</h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray">
+                Stříháte několik let, ale cítíte, že se zasekáváte? Masterclass vám ukáže nové techniky, aktuální trendy a tipy od{" "}
+                <Link href="/lektori" className="text-accent underline underline-offset-2 hover:text-white">lektorů s mezinárodní praxí</Link>
+                . Oživte svou práci a nabídněte zákazníkům něco nového. Ideální pro barbery, kteří chtějí zvládnout skin fade, hot towel shave nebo moderní textury na profesionální úrovni.
+              </p>
+            </div>
+            <div className="rounded-lg border border-border bg-bg-card p-6">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-accent/30 text-xl">
+                &#127970;
+              </div>
+              <h3 className="mt-4 font-semibold text-white">Majitel salonu</h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray">
+                Chcete sjednotit kvalitu ve svém barbershopu? Přihlaste celý tým na masterclass jako firemní školení. Lektor přizpůsobí obsah vašim potřebám a zajistí, že všichni vaši barbeři ovládají stejné techniky na stejné úrovni. Investice do vzdělání týmu se vrátí v podobě spokojenějších zákazníků a vyšších tržeb.
+              </p>
+            </div>
+            <div className="rounded-lg border border-border bg-bg-card p-6">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-accent/30 text-xl">
+                &#128161;
+              </div>
+              <h3 className="mt-4 font-semibold text-white">Nadšenec a začátečník</h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray">
+                Stříháte kamarády a uvažujete o kariéře v barberingu? Jednodenní workshop je perfektní způsob, jak si to vyzkoušet nanečisto. Zjistíte, jestli vás řemeslo baví, a pokud ano, můžete pokračovat na{" "}
+                <Link href="/mesicni-kurz" className="text-accent underline underline-offset-2 hover:text-white">měsíčním kurzu</Link>
+                {" "}nebo{" "}
+                <Link href="/dvoutydeni-kurz" className="text-accent underline underline-offset-2 hover:text-white">2týdenním intenzivním programu</Link>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Jak probíhá */}
       <section className="border-b border-border py-20">
         <div className="container">

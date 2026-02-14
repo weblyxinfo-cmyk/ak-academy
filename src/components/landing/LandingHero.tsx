@@ -53,11 +53,11 @@ export function LandingHero({
         )}
 
         {trustBadges && trustBadges.length > 0 && (
-          <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
             {trustBadges.map((badge) => (
               <span
                 key={badge.text}
-                className="rounded-full border border-border bg-white/5 px-4 py-1.5 text-xs font-medium text-gray"
+                className="rounded-full border border-accent/70 bg-accent/20 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_12px_rgba(46,184,166,0.3)] backdrop-blur-sm"
               >
                 {badge.text}
               </span>
