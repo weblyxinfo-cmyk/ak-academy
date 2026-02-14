@@ -155,7 +155,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "Kde kurzy probíhají?",
     answer:
-      "Kurzy probíhají v Praze (Praha 1, Praha 6), Slaném a Berouně. Přesné adresy najdete v sekci Kde nás najdete.",
+      "Kurzy probíhají v Praze, Slaném, Berouně a Plzni. Přesné adresy najdete v sekci Kde nás najdete.",
   },
   {
     question: "Mohu platit na splátky?",
