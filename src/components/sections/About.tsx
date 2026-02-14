@@ -34,18 +34,22 @@ export function About() {
           </p>
         </div>
 
-        <div className="mx-auto mt-12 max-w-md">
-          <h3 className="text-center text-lg font-semibold text-white">
-            Kurzy probíhají ve městech
+        <div className="mx-auto mt-14 max-w-2xl">
+          <h3 className="text-center text-2xl font-bold text-white">
+            Kde nás najdete
           </h3>
-          <div className="mt-4 flex flex-wrap justify-center gap-3">
+          <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {cities.map((city) => (
-              <span
+              <div
                 key={city}
-                className="rounded-full border border-border px-4 py-2 text-sm font-medium text-white"
+                className="flex flex-col items-center gap-2 rounded-lg border border-border bg-bg-card p-5"
               >
-                {city}
-              </span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6 text-white">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span className="text-lg font-semibold text-white">{city}</span>
+              </div>
             ))}
           </div>
         </div>

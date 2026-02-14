@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
           <a href="/" className="flex items-center gap-3">
-            <Image src="/images/logo.svg" alt="AK BARBERS Academy" width={48} height={48} className="h-12 w-auto" />
+            <Image src="/images/logo-academy-black.jpeg" alt="AK BARBERS Academy" width={48} height={48} className="h-12 w-auto rounded-full" />
             <span className="text-lg font-bold tracking-wide text-white">AK BARBERS Academy</span>
           </a>
           <div className="flex gap-6">
@@ -49,6 +49,15 @@ export function Footer() {
               Prohlášení o ochraně osobních údajů
             </a>
           </div>
+        </div>
+
+        <div className="mt-6 text-center">
+          <span className="text-xs text-gray">
+            Vytvořil{" "}
+            <a href="https://www.weblyx.cz" target="_blank" rel="noopener noreferrer" className="text-gray transition-colors hover:text-white">
+              www.weblyx.cz
+            </a>
+          </span>
         </div>
       </div>
     </footer>

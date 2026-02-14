@@ -16,11 +16,11 @@ export function Header() {
           <div className="flex items-center gap-4">
             <a href="/" className="relative h-12 w-auto shrink-0">
               <Image
-                src="/images/logo.svg"
+                src="/images/logo-academy-black.jpeg"
                 alt="AK BARBERS Academy"
                 width={48}
                 height={48}
-                className="h-12 w-auto"
+                className="h-12 w-auto rounded-full"
                 priority
               />
             </a>
