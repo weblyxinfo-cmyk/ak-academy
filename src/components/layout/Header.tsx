@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import { navItems, siteConfig } from "@/lib/data";
-import { IconCircle } from "@/components/IconCircle";
 import { MobileMenu } from "./MobileMenu";
 
 export function Header() {
@@ -45,13 +44,6 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-6">
-            <a
-              href="#contact"
-              className="flex items-center gap-2 text-sm font-semibold text-white"
-            >
-              Přihlásit se
-              <IconCircle />
-            </a>
             <a
               href={`tel:${siteConfig.phone}`}
               className="hidden text-sm font-medium text-gray transition-colors hover:text-white lg:block"
