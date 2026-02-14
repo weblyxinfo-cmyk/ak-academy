@@ -33,7 +33,7 @@ export function Courses() {
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 33vw"
                 />
-                <span className="absolute right-3 top-3 rounded-full bg-white px-3 py-1 text-xs font-semibold text-black">
+                <span className="absolute right-3 top-3 rounded-full bg-gradient-to-r from-teal-500 to-cyan-400 px-3 py-1 text-xs font-semibold text-white">
                   {levelLabels[course.level]}
                 </span>
               </div>
