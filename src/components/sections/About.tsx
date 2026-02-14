@@ -43,7 +43,7 @@ export function About() {
 
         <div className="mx-auto mt-14 max-w-4xl">
           <h3 className="text-center text-2xl font-bold text-white">
-            Kde nás najdete
+            Kde probíhají kurzy
           </h3>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {branches.map((b, i) => (

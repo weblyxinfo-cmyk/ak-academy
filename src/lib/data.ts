@@ -7,7 +7,7 @@ export const siteConfig = {
   description:
     "Profesionální barber kurzy pod vedením zkušených lektorů z AK Barbers.",
   phone: "+420 775 502 831",
-  email: "academy@akbarber.com",
+  email: "ak.barbers.cz@gmail.com",
   social: {
     facebook: "https://facebook.com/akbarberscz",
     instagram: "https://instagram.com/ak.barbers.cz",
@@ -85,7 +85,7 @@ export const courses: Course[] = [
 export const instructors: Instructor[] = [
   {
     name: "Wayer Hand",
-    role: "Hlavní lektor",
+    role: "Lektor",
     experience: "20 let zkušeností",
     focus: "Precizní fade, ostré detaily, čisté přechody",
     bio: "Americký barber z Philadelphie s dvacetiletou praxí. Wayer je známý svou maximální precizností a schopností vytvořit dokonalé fade přechody. Pod jeho vedením se naučíte techniky na světové úrovni.",
@@ -97,7 +97,7 @@ export const instructors: Instructor[] = [
     experience: "10 let zkušeností",
     focus: "Moderní střihy, fade techniky, vousy a styling",
     bio: "Všestranný barber s desetiletou praxí. Tony ovládá celé spektrum moderních pánských střihů – od klasických účesů přes fade techniky až po precizní práci s vousy a styling.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+    image: "/images/instructors/tony.jpg",
   },
   {
     name: "Oddy",
@@ -155,7 +155,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "Kde kurzy probíhají?",
     answer:
-      "Kurzy probíhají v Praze, Slaném, Berouně a Plzni. Přesné adresy najdete v sekci Kde nás najdete.",
+      "Kurzy probíhají v Praze, Slaném, Berouně a Plzni. Přesné adresy najdete v sekci Kde probíhají kurzy.",
   },
   {
     question: "Mohu platit na splátky?",
