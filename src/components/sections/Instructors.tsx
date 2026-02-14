@@ -27,7 +27,8 @@ export function Instructors() {
 
               <h3 className="mt-5 text-lg font-bold text-white">{inst.name}</h3>
               <p className="text-sm text-gray">{inst.role}</p>
-              <p className="mt-3 text-sm leading-relaxed text-gray">{inst.bio}</p>
+              <p className="mt-2 text-sm font-medium text-white">{inst.experience}</p>
+              <p className="mt-2 text-sm leading-relaxed text-gray">{inst.focus}</p>
 
               {inst.instagram && (
                 <a

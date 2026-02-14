@@ -12,6 +12,8 @@ export interface Course {
 export interface Instructor {
   name: string;
   role: string;
+  experience: string;
+  focus: string;
   bio: string;
   image: string;
   instagram?: string;

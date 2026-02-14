@@ -1,3 +1,5 @@
+const cities = ["Praha", "Beroun", "Slaný", "Plzeň"];
+
 const features = [
   {
     title: "Profesionální výuka",
@@ -21,16 +23,31 @@ export function About() {
           O akademii
         </h2>
         <p className="mx-auto mt-2 max-w-xl text-center text-sm text-gray">
-          Vstupte do světa barberingu prostřednictvím profesionálního kurzu AK Barbers Academy
+          Chcete se stát barberem nebo se posunout na vyšší úroveň?
         </p>
 
         <div className="mx-auto mt-10 max-w-3xl text-center">
           <p className="text-base leading-relaxed text-gray sm:text-lg">
             AK Barbers Academy nabízí profesionální barber kurzy pod vedením
-            majitele Adriana Křižana a jeho týmu špičkových lektorů. Naše kurzy
-            jsou určeny jak pro úplné začátečníky, tak pro barbery, kteří si
-            chtějí rozšířit a zdokonalit své dovednosti.
+            zkušených barberů z AK Barbers. Využijte jedinečnou příležitost
+            vstoupit do světa barberingu nebo si zdokonalit své dovednosti.
           </p>
+        </div>
+
+        <div className="mx-auto mt-12 max-w-md">
+          <h3 className="text-center text-lg font-semibold text-white">
+            Kurzy probíhají ve městech
+          </h3>
+          <div className="mt-4 flex flex-wrap justify-center gap-3">
+            {cities.map((city) => (
+              <span
+                key={city}
+                className="rounded-full border border-border px-4 py-2 text-sm font-medium text-white"
+              >
+                {city}
+              </span>
+            ))}
+          </div>
         </div>
 
         <div className="mx-auto mt-16 grid max-w-4xl gap-8 sm:grid-cols-3">

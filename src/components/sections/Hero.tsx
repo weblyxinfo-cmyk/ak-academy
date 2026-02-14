@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section className="relative flex min-h-[80vh] items-center justify-center border-b border-border overflow-hidden">
       <Image
-        src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1920&q=80"
+        src="/images/hero-bg.png"
         alt=""
         fill
         className="object-cover"
