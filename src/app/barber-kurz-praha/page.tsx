@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getCityBySlug, getLocationsByCity, courses, testimonials, comparisonRows, faqItems } from "@/lib/data";
 import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/landing/JsonLd";
@@ -56,6 +57,55 @@ export default function BarberKurzPrahaPage() {
         />
       </div>
 
+      {/* Úvod – barber kurzy Praha */}
+      <section className="border-b border-border py-20">
+        <div className="container">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">
+              Profesionální barber vzdělání v srdci Prahy
+            </h2>
+            <p className="mt-6 text-sm leading-relaxed text-gray sm:text-base">
+              AK BARBERS Academy nabízí komplexní barber kurzy přímo v centru Prahy na adrese Národní 949/19.
+              Naše hlavní pobočka se nachází pouhou minutu od stanice metra Národní třída (linka B), takže
+              je snadno dostupná z celé Prahy i pro studenty dojíždějící z okolních měst. Kurzy vedou{" "}
+              <Link href="/lektori" className="text-accent underline underline-offset-4 hover:text-white">
+                zkušení lektoři
+              </Link>{" "}
+              s mnohaletou praxí v oboru, kteří vás provedou od úplných základů až po pokročilé fade techniky.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-gray sm:text-base">
+              Nabízíme tři typy kurzů přizpůsobené vašim potřebám a zkušenostem:{" "}
+              <Link href="/mesicni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                měsíční kurz (180 hodin)
+              </Link>{" "}
+              pro kompletní přípravu na kariéru barbera,{" "}
+              <Link href="/dvoutydeni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                2týdenní intenzivní kurz (90 hodin)
+              </Link>{" "}
+              pro ty, kteří se chtějí rychle posunout, a{" "}
+              <Link href="/jednodenni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                jednodenní masterclass (10 hodin)
+              </Link>{" "}
+              zaměřenou na konkrétní techniky.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-gray sm:text-base">
+              Praha je centrem českého barberingu s desítkami barbershopů, kde najdete uplatnění hned po
+              absolvování kurzu. Naši absolventi pravidelně nacházejí zaměstnání do několika týdnů od
+              ukončení studia a někteří z nich nastupují přímo do sítě AK Barbers. Máte otázky ohledně
+              průběhu studia nebo cen?{" "}
+              <Link href="/casto-kladene-otazky" className="text-accent underline underline-offset-4 hover:text-white">
+                Přečtěte si naše FAQ
+              </Link>{" "}
+              nebo se rovnou{" "}
+              <Link href="#signup" className="text-accent underline underline-offset-4 hover:text-white">
+                přihlaste
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Pobočky */}
       <section className="border-b border-border py-20">
         <div className="container">
@@ -82,9 +132,43 @@ export default function BarberKurzPrahaPage() {
       <section className="border-b border-border py-20">
         <div className="container">
           <SectionHeading title={`Proč studovat v ${city.nameLocativ}`} />
-          <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-gray sm:text-base">
-            {city.whyText}
-          </p>
+          <div className="mx-auto mt-8 max-w-3xl">
+            <p className="text-center text-sm leading-relaxed text-gray sm:text-base">
+              {city.whyText}
+            </p>
+            <p className="mt-4 text-center text-sm leading-relaxed text-gray sm:text-base">
+              Pražská pobočka je naší vlajkovou lodí – najdete tu nejmodernější vybavení, největší tým{" "}
+              <Link href="/lektori" className="text-accent underline underline-offset-4 hover:text-white">
+                profesionálních lektorů
+              </Link>{" "}
+              a pravidelně nabíráme nové studenty do všech typů kurzů. Ať už zvolíte{" "}
+              <Link href="/mesicni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                měsíční kurz
+              </Link>,{" "}
+              <Link href="/dvoutydeni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                dvoutýdenní intenziv
+              </Link>{" "}
+              nebo{" "}
+              <Link href="/jednodenni-kurz" className="text-accent underline underline-offset-4 hover:text-white">
+                jednodenní masterclass
+              </Link>
+              , v Praze získáte praxi na reálných zákaznících v jednom z nejrušnějších barbershopů v centru města.
+            </p>
+            <p className="mt-4 text-center text-sm leading-relaxed text-gray sm:text-base">
+              Pokud bydlíte mimo Prahu, podívejte se na naše pobočky v{" "}
+              <Link href="/barber-kurz-plzen" className="text-accent underline underline-offset-4 hover:text-white">
+                Plzni
+              </Link>,{" "}
+              <Link href="/barber-kurz-beroun" className="text-accent underline underline-offset-4 hover:text-white">
+                Berouně
+              </Link>{" "}
+              nebo{" "}
+              <Link href="/barber-kurz-slany" className="text-accent underline underline-offset-4 hover:text-white">
+                Slaném
+              </Link>{" "}
+              – všude nabízíme stejnou kvalitu výuky se stejnými lektory.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -115,6 +199,13 @@ export default function BarberKurzPrahaPage() {
           <div className="mt-12">
             <CourseFAQ items={faqItems} />
           </div>
+          <p className="mt-8 text-center text-sm text-gray">
+            Nenašli jste odpověď na svou otázku?{" "}
+            <Link href="/casto-kladene-otazky" className="text-accent underline underline-offset-4 hover:text-white">
+              Podívejte se na kompletní seznam častých otázek
+            </Link>{" "}
+            nebo nás kontaktujte přímo.
+          </p>
         </div>
       </section>
 
@@ -131,7 +222,30 @@ export default function BarberKurzPrahaPage() {
       {/* Další města */}
       <section className="py-20">
         <div className="container text-center">
-          <h3 className="text-lg font-semibold text-white">Kurzy v dalších městech</h3>
+          <h2 className="text-lg font-semibold text-white">Kurzy v dalších městech</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-gray">
+            AK BARBERS Academy nabízí barber kurzy po celých Čechách. Vyberte si pobočku nejblíže vašemu bydlišti.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <Link
+              href="/barber-kurz-plzen"
+              className="rounded-full border border-border px-4 py-2 text-sm font-medium text-white transition-colors hover:border-accent/40 hover:text-accent"
+            >
+              Barber kurzy Plzeň
+            </Link>
+            <Link
+              href="/barber-kurz-beroun"
+              className="rounded-full border border-border px-4 py-2 text-sm font-medium text-white transition-colors hover:border-accent/40 hover:text-accent"
+            >
+              Barber kurzy Beroun
+            </Link>
+            <Link
+              href="/barber-kurz-slany"
+              className="rounded-full border border-border px-4 py-2 text-sm font-medium text-white transition-colors hover:border-accent/40 hover:text-accent"
+            >
+              Barber kurzy Slaný
+            </Link>
+          </div>
           <div className="mt-6">
             <CityLinks />
           </div>

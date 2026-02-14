@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getCourseBySlug, testimonials, locations, comparisonRows, instructors, faqItems, courseFaqItems } from "@/lib/data";
 import { generateCourseSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/landing/JsonLd";
@@ -12,7 +13,6 @@ import { TestimonialSlider } from "@/components/landing/TestimonialSlider";
 import { CourseFAQ } from "@/components/landing/CourseFAQ";
 import { CourseSignupForm } from "@/components/landing/CourseSignupForm";
 import { StickyCTA } from "@/components/landing/StickyCTA";
-import { CourseSelector } from "@/components/landing/CourseSelector";
 
 const course = getCourseBySlug("mesicni-kurz")!;
 const allFaq = [...(courseFaqItems.mesicni || []), ...faqItems.slice(0, 4)];
@@ -43,12 +43,12 @@ export default function MesicniKurzPage() {
 
       <div data-hero>
         <LandingHero
-          title="Měsíční barber kurz"
-          subtitle="180 hodin intenzivní výuky. Z úplného začátečníka se stanete profesionálním barberem s certifikátem AK Barbers Academy."
+          title="Měsíční barber kurz – 180 hodin profesionální výuky"
+          subtitle="Kompletní barber vzdělání od základů po profesionální úroveň. Za jeden měsíc se z úplného začátečníka stanete sebevědomým barberem s certifikátem AK Barbers Academy."
           price={course.price}
           ctaText="Přihlásit se na kurz"
           ctaHref="#signup"
-          secondaryCtaText="Zobrazit program"
+          secondaryCtaText="Zobrazit program kurzu"
           secondaryCtaHref="#program"
           trustBadges={[
             { text: "180 hodin praxe" },
@@ -59,24 +59,55 @@ export default function MesicniKurzPage() {
         />
       </div>
 
+      {/* Úvod ke kurzu */}
+      <section className="border-b border-border py-20">
+        <div className="container">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-2xl font-bold text-white sm:text-3xl">
+              Nejkomplexnější barber kurz v České republice
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-gray">
+              Náš vlajkový měsíční kurz je nejintenzivnější barber vzdělání, které v ČR najdete. Za <strong className="text-white">180 hodin</strong> praktické výuky projdete cestu od naprostého začátečníka k sebevědomému profesionálovi. Kurz kombinuje teorii, živé demonstrace od <Link href="/lektori" className="text-accent underline underline-offset-2 hover:text-white">zkušených lektorů</Link> a především praxi na reálných zákaznících.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-gray">
+              Na rozdíl od jiných kurzů nezůstáváme jen u cvičných hlav. Už od třetího týdne pracujete na skutečných zákaznících pod dohledem lektora, který vám poskytne okamžitou zpětnou vazbu. Díky malým skupinám (maximálně 6–8 studentů) se vám lektor může věnovat individuálně.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-gray">
+              Po úspěšném absolvování získáte <strong className="text-white">certifikát AK Barbers Academy</strong> a nejlepší absolventi mají možnost nastoupit přímo do jedné z <Link href="/barber-kurz-praha" className="text-accent underline underline-offset-2 hover:text-white">poboček AK Barbers</Link>.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Pro koho je kurz */}
       <section className="border-b border-border py-20">
         <div className="container">
-          <SectionHeading title="Pro koho je kurz" subtitle="Zjistěte, jestli je měsíční kurz pro vás" />
+          <SectionHeading title="Pro koho je měsíční kurz určen" subtitle="Zjistěte, jestli je tento kurz tou správnou volbou právě pro vás" />
           <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-3">
-            {course.forWho?.map((item) => (
+            {course.forWho?.map((item, i) => (
               <div key={item} className="rounded-lg border border-border p-6">
-                <p className="text-sm leading-relaxed text-gray">{item}</p>
+                <span className="text-2xl font-bold text-accent">{i + 1}.</span>
+                <p className="mt-3 text-sm leading-relaxed text-gray">{item}</p>
               </div>
             ))}
           </div>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-gray">
+            Nevíte si rady? Podívejte se na{" "}
+            <Link href="/dvoutydeni-kurz" className="text-accent underline underline-offset-2 hover:text-white">2týdenní kurz</Link>
+            {" "}pro pokročilé nebo{" "}
+            <Link href="/jednodenni-kurz" className="text-accent underline underline-offset-2 hover:text-white">jednodenní masterclass</Link>
+            {" "}pro aktivní barbery.
+          </p>
         </div>
       </section>
 
       {/* Program kurzu */}
       <section id="program" className="border-b border-border py-20">
         <div className="container">
-          <SectionHeading title="Program kurzu" subtitle="4 týdny od základů po profesionální úroveň" />
+          <SectionHeading title="Program měsíčního kurzu" subtitle="4 týdny strukturované výuky od základů po profesionální úroveň" />
+          <p className="mx-auto mt-6 max-w-2xl text-center text-sm text-gray">
+            Každý týden se zaměřuje na jinou oblast barberingu. Výuka probíhá každý pracovní den (pondělí–pátek) a kombinuje teoretické přednášky, live demonstrace a praktický trénink.
+          </p>
           <div className="mt-12">
             {course.program && <CourseProgram weeks={course.program} />}
           </div>
@@ -86,7 +117,7 @@ export default function MesicniKurzPage() {
       {/* Co je v ceně */}
       <section className="border-b border-border py-20">
         <div className="container">
-          <SectionHeading title="Co je v ceně" subtitle="Všechno, co potřebujete, v jedné ceně" />
+          <SectionHeading title="Co je zahrnuto v ceně kurzu" subtitle="Všechno, co potřebujete k úspěšnému startu kariéry" />
           <div className="mx-auto mt-12 max-w-2xl">
             <ul className="space-y-3">
               {course.includes?.map((item) => (
@@ -98,6 +129,11 @@ export default function MesicniKurzPage() {
                 </li>
               ))}
             </ul>
+            <p className="mt-8 text-sm text-gray">
+              Cena kurzu je <strong className="text-white">{course.price}</strong>. Nabízíme také{" "}
+              <strong className="text-white">možnost platby na splátky</strong> – pro více informací nás{" "}
+              <Link href="/#contact" className="text-accent underline underline-offset-2 hover:text-white">kontaktujte</Link>.
+            </p>
           </div>
         </div>
       </section>
@@ -105,7 +141,11 @@ export default function MesicniKurzPage() {
       {/* Lektoři */}
       <section className="border-b border-border py-20">
         <div className="container">
-          <SectionHeading title="Naši lektoři" subtitle="Učte se od těch nejlepších v oboru" />
+          <SectionHeading title="Vaši lektoři" subtitle="Učte se od mezinárodního týmu zkušených barberů" />
+          <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-gray">
+            Naši lektoři mají dohromady přes 40 let praxe v oboru. Každý z nich přináší jedinečný pohled na řemeslo.{" "}
+            <Link href="/lektori" className="text-accent underline underline-offset-2 hover:text-white">Poznejte celý tým →</Link>
+          </p>
           <div className="mt-12">
             <InstructorCards instructors={instructors} />
           </div>
@@ -115,17 +155,22 @@ export default function MesicniKurzPage() {
       {/* Porovnání */}
       <section className="border-b border-border py-20">
         <div className="container">
-          <SectionHeading title="Proč AK Academy" subtitle="Srovnání s ostatními barber kurzy" />
+          <SectionHeading title="Proč si vybrat AK Academy" subtitle="Podívejte se, čím se lišíme od ostatních barber kurzů v ČR" />
           <div className="mx-auto mt-12 max-w-3xl">
             <ComparisonTable rows={comparisonRows} />
           </div>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-gray">
+            Stále váháte? Přečtěte si{" "}
+            <Link href="/casto-kladene-otazky" className="text-accent underline underline-offset-2 hover:text-white">nejčastější otázky</Link>
+            {" "}nebo se podívejte na reference od našich absolventů níže.
+          </p>
         </div>
       </section>
 
       {/* Reference */}
       <section className="border-b border-border py-20">
         <div className="container">
-          <SectionHeading title="Reference" subtitle="Co říkají naši absolventi" />
+          <SectionHeading title="Co říkají naši absolventi" subtitle="Přečtěte si zkušenosti lidí, kteří kurzem už prošli" />
           <div className="mt-12">
             <TestimonialSlider testimonials={testimonials} />
           </div>
@@ -135,9 +180,18 @@ export default function MesicniKurzPage() {
       {/* Pobočky */}
       <section className="border-b border-border py-20">
         <div className="container">
-          <SectionHeading title="Kde kurzy probíhají" subtitle="6 poboček po celé České republice" />
+          <SectionHeading title="Kde měsíční kurz probíhá" subtitle="6 poboček po celé České republice – vyberte si tu nejbližší" />
           <div className="mx-auto mt-12 max-w-4xl">
             <LocationCards locations={locations} />
+          </div>
+          <div className="mx-auto mt-8 flex max-w-2xl flex-wrap justify-center gap-3">
+            <Link href="/barber-kurz-praha" className="text-sm text-accent underline underline-offset-2 hover:text-white">Kurzy v Praze</Link>
+            <span className="text-gray-dark">•</span>
+            <Link href="/barber-kurz-plzen" className="text-sm text-accent underline underline-offset-2 hover:text-white">Kurzy v Plzni</Link>
+            <span className="text-gray-dark">•</span>
+            <Link href="/barber-kurz-beroun" className="text-sm text-accent underline underline-offset-2 hover:text-white">Kurzy v Berouně</Link>
+            <span className="text-gray-dark">•</span>
+            <Link href="/barber-kurz-slany" className="text-sm text-accent underline underline-offset-2 hover:text-white">Kurzy ve Slaném</Link>
           </div>
         </div>
       </section>
@@ -145,17 +199,23 @@ export default function MesicniKurzPage() {
       {/* FAQ */}
       <section className="border-b border-border py-20">
         <div className="container">
-          <SectionHeading title="Časté otázky" subtitle="Odpovědi na nejčastější dotazy k měsíčnímu kurzu" />
+          <SectionHeading title="Časté otázky k měsíčnímu kurzu" subtitle="Odpovědi na nejčastější dotazy – pokud nenajdete odpověď, kontaktujte nás" />
           <div className="mt-12">
             <CourseFAQ items={allFaq} />
           </div>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-gray">
+            Máte další otázky? Podívejte se na{" "}
+            <Link href="/casto-kladene-otazky" className="text-accent underline underline-offset-2 hover:text-white">kompletní seznam FAQ</Link>
+            {" "}nebo nás{" "}
+            <Link href="/#contact" className="text-accent underline underline-offset-2 hover:text-white">kontaktujte přímo</Link>.
+          </p>
         </div>
       </section>
 
       {/* Formulář */}
       <section id="signup" className="border-b border-border py-20">
         <div className="container">
-          <SectionHeading title="Přihlaste se na kurz" subtitle="Vyplňte formulář a my se vám ozveme s detaily" />
+          <SectionHeading title="Přihlaste se na měsíční kurz" subtitle="Vyplňte formulář a ozveme se vám do 24 hodin s termíny a dalšími detaily" />
           <div className="mt-12">
             <CourseSignupForm defaultCourse="Měsíční kurz" />
           </div>
@@ -165,7 +225,30 @@ export default function MesicniKurzPage() {
       {/* Nevíte který kurz? */}
       <section className="py-20">
         <div className="container">
-          <CourseSelector />
+          <div className="mx-auto max-w-4xl rounded-lg border border-border bg-bg-card p-8 text-center">
+            <h2 className="text-xl font-bold text-white sm:text-2xl">
+              Zvažujete i jiné kurzy?
+            </h2>
+            <p className="mx-auto mt-2 max-w-lg text-sm text-gray">
+              Pokud si nejste jistí, který kurz je pro vás ten pravý, porovnejte všechny naše programy.
+            </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-4">
+              <Link
+                href="/dvoutydeni-kurz"
+                className="rounded-full border border-border px-5 py-2.5 text-sm font-medium text-white transition-colors hover:border-accent/40 hover:text-accent"
+              >
+                2týdenní kurz – {" "}
+                <span className="text-gray">15 000 Kč</span>
+              </Link>
+              <Link
+                href="/jednodenni-kurz"
+                className="rounded-full border border-border px-5 py-2.5 text-sm font-medium text-white transition-colors hover:border-accent/40 hover:text-accent"
+              >
+                1denní masterclass – {" "}
+                <span className="text-gray">4 999 Kč</span>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

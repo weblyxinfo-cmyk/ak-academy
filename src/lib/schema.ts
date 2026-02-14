@@ -112,6 +112,24 @@ export function generateLocalBusinessSchema(city: CityData, address: string, zip
   };
 }
 
+export function generatePersonSchema(instructors: import("@/types").Instructor[]) {
+  return instructors.map((inst) => ({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: inst.name,
+    jobTitle: inst.role,
+    description: inst.longBio || inst.bio,
+    image: `${siteConfig.url}${inst.image}`,
+    worksFor: {
+      "@type": "EducationalOrganization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    knowsAbout: inst.focus,
+    ...(inst.instagram ? { sameAs: [inst.instagram] } : {}),
+  }));
+}
+
 export function generateBreadcrumbSchema(items: { name: string; url: string }[]) {
   return {
     "@context": "https://schema.org",
