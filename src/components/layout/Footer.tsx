@@ -37,15 +37,20 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col items-start gap-4 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <span className="text-xs text-gray">&copy; {new Date().getFullYear()} AK BARBERS Academy</span>
-            <span className="hidden text-gray/30 sm:inline">|</span>
-            <span className="text-xs text-gray/50">
-              Web{" "}
-              <a href="https://www.weblyx.cz" target="_blank" rel="noopener noreferrer" className="text-gray/50 transition-colors hover:text-gray">
-                weblyx.cz
-              </a>
-            </span>
+            <a
+              href="https://www.weblyx.cz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group/wlx inline-flex items-center gap-1.5 rounded-md border border-border bg-white/[0.03] px-2.5 py-1 text-[10px] tracking-wider text-gray/40 transition-all hover:border-gray-light/30 hover:text-gray"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+              WEBLYX
+            </a>
           </div>
           <div className="flex flex-wrap gap-6">
             <a href={siteConfig.parentUrl} className="text-xs text-gray transition-colors hover:text-white">
