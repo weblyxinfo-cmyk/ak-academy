@@ -42,12 +42,14 @@ export function About() {
             {cities.map((city) => (
               <div
                 key={city}
-                className="flex flex-col items-center gap-2 rounded-lg border border-border bg-bg-card p-5"
+                className="group flex flex-col items-center gap-3 rounded-xl border border-accent/30 bg-accent/10 p-6 shadow-[0_0_15px_rgba(46,184,166,0.1)] transition-all duration-300 hover:border-accent/50 hover:bg-accent/15 hover:shadow-[0_0_25px_rgba(46,184,166,0.25)]"
               >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6 text-white">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/20 transition-colors duration-300 group-hover:bg-accent/30">
+                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1" className="h-6 w-6 text-accent">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" fill="#000" stroke="none" />
+                  </svg>
+                </div>
                 <span className="text-lg font-semibold text-white">{city}</span>
               </div>
             ))}
