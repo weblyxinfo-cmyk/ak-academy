@@ -14,13 +14,13 @@ export function Header() {
       <header className="sticky top-0 z-50 border-b border-border bg-bg">
         <div className="container flex h-[72px] items-center justify-between">
           <div className="flex items-center gap-4">
-            <a href="/" className="relative h-12 w-auto shrink-0">
+            <a href="/" className="relative shrink-0">
               <Image
                 src="/images/logo-academy-black.jpeg"
                 alt="AK BARBERS Academy"
-                width={48}
-                height={48}
-                className="h-12 w-auto rounded-full"
+                width={64}
+                height={64}
+                className="h-14 w-14 rounded-full object-cover"
                 priority
               />
             </a>

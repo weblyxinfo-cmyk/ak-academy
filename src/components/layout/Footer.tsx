@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
           <a href="/" className="flex items-center gap-3">
-            <Image src="/images/logo-academy-black.jpeg" alt="AK BARBERS Academy" width={48} height={48} className="h-12 w-auto rounded-full" />
+            <Image src="/images/logo-academy-black.jpeg" alt="AK BARBERS Academy" width={56} height={56} className="h-14 w-14 rounded-full object-cover" />
             <span className="text-lg font-bold tracking-wide text-white">AK BARBERS Academy</span>
           </a>
           <div className="flex gap-6">
