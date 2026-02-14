@@ -6,10 +6,35 @@ import { Gallery } from "@/components/sections/Gallery";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { Contact } from "@/components/sections/Contact";
+import { JsonLd } from "@/components/landing/JsonLd";
+import { generateEducationalOrganizationSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { faqItems, siteConfig } from "@/lib/data";
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={generateEducationalOrganizationSchema()} />
+      <JsonLd data={generateFAQSchema(faqItems)} />
+      <JsonLd
+        data={generateBreadcrumbSchema([
+          { name: "Domů", url: siteConfig.url },
+        ])}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: siteConfig.name,
+          url: siteConfig.url,
+          description: siteConfig.description,
+          inLanguage: "cs",
+          publisher: {
+            "@type": "EducationalOrganization",
+            name: siteConfig.name,
+            url: siteConfig.url,
+          },
+        }}
+      />
       <Hero />
       <About />
       <Courses />
