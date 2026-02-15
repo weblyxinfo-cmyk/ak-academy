@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description: city.seoDescription,
     url: "https://barber-kurzy.com/barber-kurz-praha",
     type: "website",
+    siteName: "AK BARBERS Academy",
+    locale: "cs_CZ",
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "AK BARBERS Academy" }],
   },
 };
 

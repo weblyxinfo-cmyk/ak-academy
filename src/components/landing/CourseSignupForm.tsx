@@ -154,7 +154,7 @@ export function CourseSignupForm({ defaultCourse, defaultCity }: CourseSignupFor
             <a
               href={siteConfig.legal.privacy}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="underline transition-colors hover:text-white"
             >
               zpracováním osobních údajů

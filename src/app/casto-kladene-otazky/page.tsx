@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     description: "Odpovědi na 35+ otázek o barber kurzech AK BARBERS Academy. Pro koho jsou kurzy, certifikát, splátky a rozdíly mezi kurzy.",
     url: "https://barber-kurzy.com/casto-kladene-otazky",
     type: "website",
+    siteName: "AK BARBERS Academy",
+    locale: "cs_CZ",
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "AK BARBERS Academy" }],
   },
 };
 

@@ -24,6 +24,9 @@ export const metadata: Metadata = {
       "Poznejte lektory AK BARBERS Academy – mezinárodní tým barberů s 10–20 lety praxe. Učte se od profesionálů.",
     url: "https://barber-kurzy.com/lektori",
     type: "website",
+    siteName: "AK BARBERS Academy",
+    locale: "cs_CZ",
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "AK BARBERS Academy" }],
   },
 };
 

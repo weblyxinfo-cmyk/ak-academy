@@ -16,11 +16,11 @@ export const metadata: Metadata = {
     template: "%s | AK BARBERS Academy",
   },
   description:
-    "Barber kurzy od 4 999 Kč pod vedením lektorů z AK Barbers. Měsíční, 2týdenní i 1denní kurzy v Praze, Plzni, Berouně a Slaném. Certifikát, praxe na zákaznících. Přihlaste se.",
+    "Barber kurzy od 4 999 Kč pod vedením lektorů z AK Barbers. Měsíční, 2týdenní i 1denní kurzy v Praze, Plzni, Berouně a Slaném. Certifikát + praxe. Přihlaste se.",
   metadataBase: new URL("https://barber-kurzy.com"),
   openGraph: {
     title: "AK BARBERS Academy – Profesionální barber kurzy",
-    description: "Barber kurzy od 4 999 Kč pod vedením lektorů z AK Barbers. Měsíční, 2týdenní i 1denní kurzy v Praze, Plzni, Berouně a Slaném. Přihlaste se.",
+    description: "Barber kurzy od 4 999 Kč pod vedením lektorů z AK Barbers. Kurzy v Praze, Plzni, Berouně a Slaném. Certifikát + praxe. Přihlaste se.",
     url: "https://barber-kurzy.com",
     siteName: "AK BARBERS Academy",
     locale: "cs_CZ",

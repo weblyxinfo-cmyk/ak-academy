@@ -6,9 +6,9 @@ export const cityData: CityData[] = [
     name: "Praha",
     nameLocativ: "Praze",
     locations: ["praha-1", "praha-6"],
-    seoTitle: "Barber kurzy Praha – Profesionální barber výuka",
+    seoTitle: "Barber kurzy Praha – Profesionální výuka",
     seoDescription:
-      "Barber kurzy v centru Prahy od 4 999 Kč. 2 pobočky – Národní 949/19 (metro B) a Praha 6. Měsíční, 2týdenní i 1denní kurzy s certifikátem. Praxe na reálných zákaznících. Přihlaste se.",
+      "Barber kurzy v Praze od 4 999 Kč. 2 pobočky – Národní (metro B) a Praha 6. Certifikát + praxe na reálných zákaznících. Přihlaste se online.",
     heroTitle: "Barber kurzy v Praze",
     heroSubtitle:
       "Profesionální barber vzdělání v srdci Prahy. Učte se od těch nejlepších v oboru na adrese Národní 949/19, Praha 1.",
@@ -20,9 +20,9 @@ export const cityData: CityData[] = [
     name: "Plzeň",
     nameLocativ: "Plzni",
     locations: ["plzen"],
-    seoTitle: "Barber kurzy Plzeň – Profesionální barber výuka",
+    seoTitle: "Barber kurzy Plzeň – Profesionální výuka",
     seoDescription:
-      "Barber kurzy v Plzni od 4 999 Kč – nemusíte dojíždět do Prahy. Pobočka Gerská 2030/23, trolejbus 13. Stejní lektoři jako v Praze, certifikát AK Barbers. Přihlaste se online.",
+      "Barber kurzy v Plzni od 4 999 Kč – nemusíte dojíždět do Prahy. Pobočka Gerská, trolejbus 13. Stejní lektoři, certifikát AK Barbers. Přihlaste se.",
     heroTitle: "Barber kurzy v Plzni",
     heroSubtitle:
       "Profesionální barber kurzy přímo v Plzni. Nemusíte dojíždět do Prahy – kvalitní vzdělání je blíž, než si myslíte.",
@@ -34,9 +34,9 @@ export const cityData: CityData[] = [
     name: "Beroun",
     nameLocativ: "Berouně",
     locations: ["beroun-1", "beroun-2"],
-    seoTitle: "Barber kurzy Beroun – Profesionální barber výuka",
+    seoTitle: "Barber kurzy Beroun – Profesionální výuka",
     seoDescription:
-      "Barber kurzy v Berouně od 4 999 Kč. Dvě pobočky v centru města, 30 min vlakem z Prahy. Menší skupiny, více individuální pozornosti. Certifikát AK Barbers. Přihlaste se.",
+      "Barber kurzy v Berouně od 4 999 Kč. Dvě pobočky v centru, 30 min vlakem z Prahy. Menší skupiny, individuální přístup. Certifikát. Přihlaste se.",
     heroTitle: "Barber kurzy v Berouně",
     heroSubtitle:
       "Barber vzdělání přímo v Berouně. Dvě pobočky v centru města, snadná dostupnost vlakem z Prahy.",
@@ -48,9 +48,9 @@ export const cityData: CityData[] = [
     name: "Slaný",
     nameLocativ: "Slaném",
     locations: ["slany"],
-    seoTitle: "Barber kurzy Slaný – Profesionální barber výuka",
+    seoTitle: "Barber kurzy Slaný – Profesionální výuka",
     seoDescription:
-      "Barber kurzy ve Slaném od 4 999 Kč. Klidné prostředí, malé skupiny a intenzivnější pozornost lektorů. Pobočka Třebízského 182, 5 min od nádraží. Certifikát AK Barbers. Přihlaste se.",
+      "Barber kurzy ve Slaném od 4 999 Kč. Klidné prostředí, malé skupiny, intenzivní pozornost lektorů. 5 min od nádraží. Certifikát. Přihlaste se.",
     heroTitle: "Barber kurzy ve Slaném",
     heroSubtitle:
       "Profesionální barber kurzy ve Slaném. Malé město, velké možnosti – kvalitní vzdělání blízko domova.",

@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description: course.meta?.description,
     url: "https://barber-kurzy.com/mesicni-kurz",
     type: "website",
+    siteName: "AK BARBERS Academy",
+    locale: "cs_CZ",
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "AK BARBERS Academy" }],
   },
 };
 
