@@ -5,7 +5,7 @@ export const siteConfig = {
   url: "https://barber-kurzy.com",
   parentUrl: "https://www.akbarber.com",
   description:
-    "Profesionální barber kurzy pod vedením zkušených lektorů z AK Barbers. Kurzy pro začátečníky i pokročilé v Praze, Plzni, Berouně a Slaném.",
+    "Barber kurzy od 4 999 Kč pod vedením lektorů z AK Barbers. Měsíční, 2týdenní i 1denní kurzy v Praze, Plzni, Berouně a Slaném. Certifikát, praxe na zákaznících.",
   phone: "+420 775 502 831",
   email: "ak.barbers.cz@gmail.com",
   social: {

@@ -94,7 +94,7 @@ export const courses: Course[] = [
     meta: {
       title: "Měsíční barber kurz 180h – Kompletní barber vzdělání",
       description:
-        "Kompletní měsíční barber kurz – 180 hodin intenzivní výuky za 35 000 Kč. Fade techniky, práce s břitvou, certifikát. Praxe na zákaznících v Praze.",
+        "Kompletní měsíční barber kurz – 180 hodin intenzivní výuky za 35 000 Kč. Fade techniky, práce s břitvou, styling vousů. Certifikát + praxe na reálných zákaznících. Přihlaste se online.",
     },
   },
   {
@@ -163,7 +163,7 @@ export const courses: Course[] = [
     meta: {
       title: "2týdenní barber kurz 90h – Intenzivní program",
       description:
-        "Intenzivní 2týdenní barber kurz – 90 hodin za 15 000 Kč. Fade techniky, vousy, styling. Certifikát AK Barbers Academy. Kurzy v Praze a dalších městech.",
+        "Intenzivní 2týdenní barber kurz – 90 hodin za 15 000 Kč. Fade techniky, vousy, styling. Certifikát + praxe na zákaznících v Praze, Plzni, Berouně i Slaném. Přihlaste se.",
     },
   },
   {
@@ -204,7 +204,7 @@ export const courses: Course[] = [
     meta: {
       title: "1denní barber masterclass – Workshop pro barbery",
       description:
-        "Jednodenní barber masterclass – 10 hodin za 4 999 Kč. Live demonstrace, hands-on trénink, certifikát. Zdokonalte své techniky za jeden den.",
+        "Jednodenní barber masterclass – 10 hodin praktické výuky za 4 999 Kč. Live demonstrace, hands-on trénink pod vedením profesionálů. Certifikát AK Barbers. Rezervujte si místo.",
     },
   },
 ];

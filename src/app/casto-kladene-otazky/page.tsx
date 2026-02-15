@@ -15,11 +15,11 @@ const allFaq = [
 export const metadata: Metadata = {
   title: "Často kladené otázky – FAQ barber kurzy",
   description:
-    "Odpovědi na nejčastější otázky o barber kurzech AK BARBERS Academy. Pro koho jsou kurzy, co potřebuji, certifikát, splátky, rozdíly mezi kurzy, pobočky v Praze, Plzni, Berouně a Slaném.",
+    "Odpovědi na 35+ otázek o barber kurzech AK BARBERS Academy. Pro koho jsou kurzy, co potřebuji, certifikát, splátky, rozdíly mezi kurzy a pobočky. Vše na jednom místě.",
   alternates: { canonical: "https://barber-kurzy.com/casto-kladene-otazky" },
   openGraph: {
     title: "Často kladené otázky – FAQ barber kurzy",
-    description: "Odpovědi na nejčastější otázky o barber kurzech AK BARBERS Academy.",
+    description: "Odpovědi na 35+ otázek o barber kurzech AK BARBERS Academy. Pro koho jsou kurzy, certifikát, splátky a rozdíly mezi kurzy.",
     url: "https://barber-kurzy.com/casto-kladene-otazky",
     type: "website",
   },
