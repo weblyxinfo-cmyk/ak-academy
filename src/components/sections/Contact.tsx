@@ -127,7 +127,9 @@ export function Contact() {
               className="flex flex-col gap-4 rounded-lg border border-border p-8"
             >
               <div>
+                <label htmlFor="contact-name" className="sr-only">Jméno a příjmení</label>
                 <input
+                  id="contact-name"
                   type="text"
                   name="name"
                   placeholder="Jméno, příjmení *"
@@ -139,7 +141,9 @@ export function Contact() {
               </div>
 
               <div>
+                <label htmlFor="contact-email" className="sr-only">Email</label>
                 <input
+                  id="contact-email"
                   type="email"
                   name="email"
                   placeholder="Email *"
@@ -150,27 +154,37 @@ export function Contact() {
                 )}
               </div>
 
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Telefon"
-                className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-white placeholder:text-gray-light outline-none transition-colors focus:border-white"
-              />
-
-              <select
-                name="course"
-                className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-gray-light outline-none transition-colors focus:border-white"
-              >
-                <option value="" className="bg-black">Vyberte kurz (volitelné)</option>
-                {courses.map((c) => (
-                  <option key={c.id} value={c.title} className="bg-black">
-                    {c.title} – {c.price}
-                  </option>
-                ))}
-              </select>
+              <div>
+                <label htmlFor="contact-phone" className="sr-only">Telefon</label>
+                <input
+                  id="contact-phone"
+                  type="tel"
+                  name="phone"
+                  placeholder="Telefon"
+                  className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-white placeholder:text-gray-light outline-none transition-colors focus:border-white"
+                />
+              </div>
 
               <div>
+                <label htmlFor="contact-course" className="sr-only">Výběr kurzu</label>
+                <select
+                  id="contact-course"
+                  name="course"
+                  className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-gray-light outline-none transition-colors focus:border-white"
+                >
+                  <option value="" className="bg-black">Vyberte kurz (volitelné)</option>
+                  {courses.map((c) => (
+                    <option key={c.id} value={c.title} className="bg-black">
+                      {c.title} – {c.price}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="contact-message" className="sr-only">Zpráva</label>
                 <textarea
+                  id="contact-message"
                   name="message"
                   placeholder="Zpráva *"
                   rows={3}
@@ -193,7 +207,7 @@ export function Contact() {
                     <a
                       href={siteConfig.legal.privacy}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="nofollow noopener noreferrer"
                       className="underline transition-colors hover:text-white"
                     >
                       zpracováním osobních údajů

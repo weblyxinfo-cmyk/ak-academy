@@ -25,9 +25,18 @@ export const metadata: Metadata = {
     siteName: "AK BARBERS Academy",
     locale: "cs_CZ",
     type: "website",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AK BARBERS Academy – Profesionální barber kurzy",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/images/og-image.jpg"],
   },
   robots: {
     index: true,

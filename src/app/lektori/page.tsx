@@ -14,12 +14,12 @@ const instructorFaq = faqItems.filter(
 );
 
 export const metadata: Metadata = {
-  title: "Lektoři – AK BARBERS Academy | Profesionální barber instruktoři",
+  title: "Lektoři – Profesionální barber instruktoři",
   description:
     "Poznejte lektory AK BARBERS Academy. Mezinárodní tým zkušených barberů s 10–20 lety praxe. Wayer Hand (USA), Tony, Oddy – učte se od těch nejlepších v Praze, Plzni, Berouně a Slaném.",
   alternates: { canonical: "https://barber-kurzy.com/lektori" },
   openGraph: {
-    title: "Lektoři – AK BARBERS Academy",
+    title: "Lektoři – Profesionální barber instruktoři",
     description:
       "Poznejte lektory AK BARBERS Academy. Mezinárodní tým zkušených barberů s 10–20 lety praxe.",
     url: "https://barber-kurzy.com/lektori",

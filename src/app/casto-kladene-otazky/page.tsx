@@ -13,12 +13,12 @@ const allFaq = [
 ];
 
 export const metadata: Metadata = {
-  title: "Často kladené otázky – AK BARBERS Academy | FAQ barber kurzy",
+  title: "Často kladené otázky – FAQ barber kurzy",
   description:
     "Odpovědi na nejčastější otázky o barber kurzech AK BARBERS Academy. Pro koho jsou kurzy, co potřebuji, certifikát, splátky, rozdíly mezi kurzy, pobočky v Praze, Plzni, Berouně a Slaném.",
   alternates: { canonical: "https://barber-kurzy.com/casto-kladene-otazky" },
   openGraph: {
-    title: "Často kladené otázky – AK BARBERS Academy",
+    title: "Často kladené otázky – FAQ barber kurzy",
     description: "Odpovědi na nejčastější otázky o barber kurzech AK BARBERS Academy.",
     url: "https://barber-kurzy.com/casto-kladene-otazky",
     type: "website",

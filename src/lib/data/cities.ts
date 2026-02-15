@@ -6,7 +6,7 @@ export const cityData: CityData[] = [
     name: "Praha",
     nameLocativ: "Praze",
     locations: ["praha-1", "praha-6"],
-    seoTitle: "Barber kurzy Praha – AK BARBERS Academy | Profesionální výuka",
+    seoTitle: "Barber kurzy Praha – Profesionální barber výuka",
     seoDescription:
       "Barber kurzy v Praze od AK BARBERS Academy. Měsíční, 2týdenní i 1denní kurzy v centru Prahy. Pobočka Národní 949/19, Praha 1. Certifikát, praxe na zákaznících.",
     heroTitle: "Barber kurzy v Praze",
@@ -20,7 +20,7 @@ export const cityData: CityData[] = [
     name: "Plzeň",
     nameLocativ: "Plzni",
     locations: ["plzen"],
-    seoTitle: "Barber kurzy Plzeň – AK BARBERS Academy | Profesionální výuka",
+    seoTitle: "Barber kurzy Plzeň – Profesionální barber výuka",
     seoDescription:
       "Barber kurzy v Plzni od AK BARBERS Academy. Měsíční, 2týdenní i 1denní kurzy. Pobočka Gerská 2030/23, Plzeň. Certifikát AK Barbers.",
     heroTitle: "Barber kurzy v Plzni",
@@ -34,7 +34,7 @@ export const cityData: CityData[] = [
     name: "Beroun",
     nameLocativ: "Berouně",
     locations: ["beroun-1", "beroun-2"],
-    seoTitle: "Barber kurzy Beroun – AK BARBERS Academy | Profesionální výuka",
+    seoTitle: "Barber kurzy Beroun – Profesionální barber výuka",
     seoDescription:
       "Barber kurzy v Berouně od AK BARBERS Academy. Měsíční, 2týdenní i 1denní kurzy. Dvě pobočky v centru Berouna. Certifikát AK Barbers.",
     heroTitle: "Barber kurzy v Berouně",
@@ -48,7 +48,7 @@ export const cityData: CityData[] = [
     name: "Slaný",
     nameLocativ: "Slaném",
     locations: ["slany"],
-    seoTitle: "Barber kurzy Slaný – AK BARBERS Academy | Profesionální výuka",
+    seoTitle: "Barber kurzy Slaný – Profesionální barber výuka",
     seoDescription:
       "Barber kurzy ve Slaném od AK BARBERS Academy. Měsíční, 2týdenní i 1denní kurzy. Pobočka Třebízského 182. Certifikát AK Barbers.",
     heroTitle: "Barber kurzy ve Slaném",

@@ -73,6 +73,8 @@ export function Header() {
             </Link>
             <a
               href={siteConfig.parentUrl}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
               className="hidden text-xs text-gray transition-colors hover:text-white sm:block"
             >
               &larr; AK BARBERS
