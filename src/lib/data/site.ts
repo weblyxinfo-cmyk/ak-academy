@@ -11,6 +11,7 @@ export const siteConfig = {
   social: {
     facebook: "https://facebook.com/akbarberscz",
     instagram: "https://instagram.com/ak.barbers.cz",
+    google: "https://www.google.com/maps/search/Barber+Kurzy+Praha",
   },
   legal: {
     cookies: "https://www.akbarber.com/zasady-pouzivani-souboru-cookie-eu/",

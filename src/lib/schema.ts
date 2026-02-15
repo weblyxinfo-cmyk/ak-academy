@@ -11,7 +11,7 @@ export function generateEducationalOrganizationSchema() {
     description: siteConfig.description,
     telephone: siteConfig.phone,
     email: siteConfig.email,
-    sameAs: [siteConfig.social.facebook, siteConfig.social.instagram],
+    sameAs: [siteConfig.social.facebook, siteConfig.social.instagram, siteConfig.social.google],
     address: {
       "@type": "PostalAddress",
       streetAddress: "Národní 949/19",
@@ -37,7 +37,7 @@ export function generateCourseSchema(course: Course) {
       "@type": "EducationalOrganization",
       name: siteConfig.name,
       url: siteConfig.url,
-      sameAs: [siteConfig.social.facebook, siteConfig.social.instagram],
+      sameAs: [siteConfig.social.facebook, siteConfig.social.instagram, siteConfig.social.google],
     },
     url: `${siteConfig.url}/${course.slug}`,
     courseCode: course.id,
@@ -108,7 +108,7 @@ export function generateLocalBusinessSchema(city: CityData, address: string, zip
       name: siteConfig.name,
       url: siteConfig.url,
     },
-    sameAs: [siteConfig.social.facebook, siteConfig.social.instagram],
+    sameAs: [siteConfig.social.facebook, siteConfig.social.instagram, siteConfig.social.google],
   };
 }
 
