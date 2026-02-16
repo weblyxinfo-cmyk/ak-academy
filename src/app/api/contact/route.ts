@@ -1,4 +1,13 @@
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_APP_PASSWORD,
+  },
+});
 
 export async function POST(request: Request) {
   try {
@@ -19,31 +28,27 @@ export async function POST(request: Request) {
       );
     }
 
-    const apiKey = process.env.RESEND_API_KEY;
     const to = process.env.CONTACT_EMAIL_TO || "ak.barbers.cz@gmail.com";
 
-    if (apiKey) {
-      const { Resend } = await import("resend");
-      const resend = new Resend(apiKey);
-
-      await resend.emails.send({
-        from: "AK Academy Web <onboarding@resend.dev>",
-        to: [to],
-        subject: `Nová přihláška z webu od ${name}${body.course ? ` – ${body.course}` : ""}`,
-        html: `
-          <h2>Nová přihláška z kontaktního formuláře Academy</h2>
-          <p><strong>Jméno:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Telefon:</strong> ${body.phone || "Nevyplněno"}</p>
-          <p><strong>Kurz:</strong> ${body.course || "Nezvolen"}</p>
-          <p><strong>Zpráva:</strong></p>
-          <p>${message}</p>
-        `,
-      });
-    }
+    await transporter.sendMail({
+      from: `"AK Academy Web" <${process.env.GMAIL_USER}>`,
+      to,
+      replyTo: email,
+      subject: `Nová zpráva z webu od ${name}${body.course ? ` – ${body.course}` : ""}`,
+      html: `
+        <h2>Nová zpráva z kontaktního formuláře</h2>
+        <p><strong>Jméno:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Telefon:</strong> ${body.phone || "Nevyplněno"}</p>
+        <p><strong>Kurz:</strong> ${body.course || "Nezvolen"}</p>
+        <p><strong>Zpráva:</strong></p>
+        <p>${message}</p>
+      `,
+    });
 
     return NextResponse.json({ success: true });
-  } catch {
+  } catch (error) {
+    console.error("Contact form error:", error);
     return NextResponse.json(
       { error: "Nepodařilo se odeslat zprávu." },
       { status: 500 }
