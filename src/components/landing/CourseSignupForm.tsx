@@ -125,11 +125,11 @@ export function CourseSignupForm({ defaultCourse, defaultCity }: CourseSignupFor
       <select
         name="course"
         defaultValue={defaultCourse || ""}
-        className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-white outline-none transition-colors focus:border-white"
+        className="w-full appearance-none border-b border-gray-dark bg-transparent py-3 text-sm text-white outline-none transition-colors focus:border-white"
       >
-        <option value="" className="bg-black">Vyberte kurz</option>
+        <option value="" className="bg-neutral-900 text-gray-light">Vyberte kurz</option>
         {courses.map((c) => (
-          <option key={c.id} value={c.title} className="bg-black">
+          <option key={c.id} value={c.title} className="bg-neutral-900 text-white">
             {c.title} – {c.price}
           </option>
         ))}
@@ -138,11 +138,11 @@ export function CourseSignupForm({ defaultCourse, defaultCity }: CourseSignupFor
       <select
         name="city"
         defaultValue={defaultCity || ""}
-        className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-white outline-none transition-colors focus:border-white"
+        className="w-full appearance-none border-b border-gray-dark bg-transparent py-3 text-sm text-white outline-none transition-colors focus:border-white"
       >
-        <option value="" className="bg-black">Preferovaná pobočka</option>
+        <option value="" className="bg-neutral-900 text-gray-light">Preferovaná pobočka</option>
         {uniqueCities.map((city) => (
-          <option key={city} value={city} className="bg-black">
+          <option key={city} value={city} className="bg-neutral-900 text-white">
             {city}
           </option>
         ))}

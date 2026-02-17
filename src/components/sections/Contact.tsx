@@ -174,11 +174,11 @@ export function Contact() {
                 <select
                   id="contact-course"
                   name="course"
-                  className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-white outline-none transition-colors focus:border-white"
+                  className="w-full appearance-none border-b border-gray-dark bg-transparent py-3 text-sm text-white outline-none transition-colors focus:border-white"
                 >
-                  <option value="" className="bg-black">Vyberte kurz (volitelné)</option>
+                  <option value="" className="bg-neutral-900 text-gray-light">Vyberte kurz (volitelné)</option>
                   {courses.map((c) => (
-                    <option key={c.id} value={c.title} className="bg-black">
+                    <option key={c.id} value={c.title} className="bg-neutral-900 text-white">
                       {c.title} – {c.price}
                     </option>
                   ))}
