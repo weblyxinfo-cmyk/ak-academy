@@ -104,7 +104,7 @@ export function Contact() {
                       {siteConfig.email}
                     </a>
                   </div>
-                  <div className="text-sm text-gray">Praha, Česká republika</div>
+                  <div className="text-sm text-gray">Národní 949/19, Praha 1</div>
                 </div>
               </div>
 
@@ -170,7 +170,7 @@ export function Contact() {
                 <select
                   id="contact-course"
                   name="course"
-                  className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-gray-light outline-none transition-colors focus:border-white"
+                  className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-white outline-none transition-colors focus:border-white"
                 >
                   <option value="" className="bg-black">Vyberte kurz (volitelné)</option>
                   {courses.map((c) => (

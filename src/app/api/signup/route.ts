@@ -1,13 +1,7 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASSWORD,
-  },
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
@@ -29,9 +23,10 @@ export async function POST(request: Request) {
     }
 
     const to = process.env.CONTACT_EMAIL_TO || "ak.barbers.cz@gmail.com";
+    const from = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
 
-    await transporter.sendMail({
-      from: `"AK Academy Web" <${process.env.GMAIL_USER}>`,
+    await resend.emails.send({
+      from: `AK Academy Web <${from}>`,
       to,
       replyTo: email,
       subject: `Nová přihláška z LP od ${name}${body.course ? ` – ${body.course}` : ""}`,

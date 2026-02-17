@@ -119,7 +119,7 @@ export function CourseSignupForm({ defaultCourse, defaultCity }: CourseSignupFor
       <select
         name="course"
         defaultValue={defaultCourse || ""}
-        className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-gray-light outline-none transition-colors focus:border-white"
+        className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-white outline-none transition-colors focus:border-white"
       >
         <option value="" className="bg-black">Vyberte kurz</option>
         {courses.map((c) => (
@@ -132,7 +132,7 @@ export function CourseSignupForm({ defaultCourse, defaultCity }: CourseSignupFor
       <select
         name="city"
         defaultValue={defaultCity || ""}
-        className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-gray-light outline-none transition-colors focus:border-white"
+        className="w-full border-b border-gray-dark bg-transparent py-3 text-sm text-white outline-none transition-colors focus:border-white"
       >
         <option value="" className="bg-black">Preferovaná pobočka</option>
         {uniqueCities.map((city) => (
