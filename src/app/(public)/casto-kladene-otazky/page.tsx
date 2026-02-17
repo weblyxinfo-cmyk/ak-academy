@@ -28,9 +28,9 @@ export default async function FAQPage() {
   const courses = await getAllCourses();
   const allFaq = [...faqItems, ...Object.values(byCourse).flat()];
   const courseBySlug = Object.fromEntries(courses.map(c => [c.slug, c]));
-  const mesicniId = courseBySlug["mesicni-kurz"]?.id;
-  const dvoutydeniId = courseBySlug["dvoutydeni-kurz"]?.id;
-  const jednodenekId = courseBySlug["jednodenni-kurz"]?.id;
+  const mesicniId = String(courseBySlug["mesicni-kurz"]?.id ?? "");
+  const dvoutydeniId = String(courseBySlug["dvoutydeni-kurz"]?.id ?? "");
+  const jednodenekId = String(courseBySlug["jednodenni-kurz"]?.id ?? "");
   return (
     <>
       <JsonLd data={generateFAQSchema(allFaq)} />

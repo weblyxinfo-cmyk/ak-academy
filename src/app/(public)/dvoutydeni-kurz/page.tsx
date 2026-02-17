@@ -188,7 +188,7 @@ export default async function DvoutydeniKurzPage() {
         <div className="container">
           <SectionHeading title="Pro koho je 2týdenní kurz určen" subtitle="Zjistěte, jestli je tento kurz tou správnou volbou právě pro vás" />
           <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-3">
-            {course.forWho?.map((item, i) => (
+            {course.forWho?.map((item: string, i: number) => (
               <div key={item} className="rounded-lg border border-border p-6">
                 <span className="text-2xl font-bold text-accent">{i + 1}.</span>
                 <p className="mt-3 text-sm leading-relaxed text-gray">{item}</p>
@@ -224,7 +224,7 @@ export default async function DvoutydeniKurzPage() {
           <SectionHeading title="Co je zahrnuto v ceně" subtitle="Kompletní balíček pro vaši barber specializaci" />
           <div className="mx-auto mt-12 max-w-2xl">
             <ul className="space-y-3">
-              {course.includes?.map((item) => (
+              {course.includes?.map((item: string) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-gray">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="mt-0.5 h-5 w-5 shrink-0 text-accent">
                     <polyline points="20 6 9 17 4 12" />
