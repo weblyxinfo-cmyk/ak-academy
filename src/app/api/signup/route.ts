@@ -43,7 +43,7 @@ export async function POST(request: Request) {
     const to = (process.env.CONTACT_EMAIL_TO || "ak.barbers.cz@gmail.com").trim();
     const from = (process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev").trim();
 
-    await resend.emails.send({
+    const { data, error: sendError } = await resend.emails.send({
       from: `AK Academy Web <${from}>`,
       to,
       replyTo: email,
@@ -58,7 +58,15 @@ export async function POST(request: Request) {
       `,
     });
 
-    return NextResponse.json({ success: true });
+    if (sendError) {
+      console.error("Resend error (signup):", sendError);
+      return NextResponse.json(
+        { error: "Nepodařilo se odeslat přihlášku.", detail: sendError.message },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({ success: true, id: data?.id });
   } catch (error) {
     console.error("Signup form error:", error);
     return NextResponse.json(
