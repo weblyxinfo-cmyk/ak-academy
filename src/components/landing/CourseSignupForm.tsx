@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useEffect, FormEvent } from "react";
+import confetti from "canvas-confetti";
 import { IconCircle } from "@/components/IconCircle";
 import { courses, locations, siteConfig } from "@/lib/data";
 
@@ -74,11 +75,22 @@ export function CourseSignupForm({ defaultCourse, defaultCity }: CourseSignupFor
     }
   }
 
+  useEffect(() => {
+    if (status === "success") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      confetti({
+        particleCount: 150,
+        spread: 80,
+        origin: { y: 0.3 },
+      });
+    }
+  }, [status]);
+
   if (status === "success") {
     return (
       <div className="mx-auto max-w-2xl rounded-lg border border-border p-12 text-center">
-        <h3 className="text-2xl font-bold text-white">Děkujeme!</h3>
-        <p className="mt-2 text-gray">
+        <h3 className="text-3xl font-bold text-white">Děkujeme!</h3>
+        <p className="mt-4 text-gray">
           Vaše přihláška byla odeslána. Ozveme se vám co nejdříve s detaily kurzu.
         </p>
       </div>
