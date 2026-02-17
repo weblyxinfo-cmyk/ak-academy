@@ -59,6 +59,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="cs" className={inter.variable}>
+      <head>
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+      </head>
       <body className="antialiased">
         <Header />
         <main>{children}</main>
