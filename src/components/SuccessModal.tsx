@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useCallback } from "react";
+import { createPortal } from "react-dom";
 import confetti from "canvas-confetti";
 
 interface SuccessModalProps {
@@ -10,6 +11,16 @@ interface SuccessModalProps {
 
 export function SuccessModal({ open, onClose }: SuccessModalProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  // Lock body scroll when open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
 
   // Confetti
   useEffect(() => {
@@ -43,12 +54,51 @@ export function SuccessModal({ open, onClose }: SuccessModalProps) {
 
   if (!open) return null;
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4">
-      <canvas ref={canvasRef} className="pointer-events-none absolute inset-0 h-full w-full" />
+  return createPortal(
+    <div
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: 99999,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "rgba(0, 0, 0, 0.92)",
+        padding: "1rem",
+      }}
+    >
+      <canvas
+        ref={canvasRef}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          pointerEvents: "none",
+        }}
+      />
       <button
         onClick={handleClose}
-        className="absolute left-5 top-5 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-border text-gray transition-colors hover:border-white hover:text-white"
+        style={{
+          position: "absolute",
+          top: "1.25rem",
+          left: "1.25rem",
+          zIndex: 10,
+          display: "flex",
+          width: "2.5rem",
+          height: "2.5rem",
+          alignItems: "center",
+          justifyContent: "center",
+          borderRadius: "50%",
+          border: "1px solid #444",
+          background: "transparent",
+          color: "#aaa",
+          cursor: "pointer",
+        }}
         aria-label="Zavřít"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -56,12 +106,27 @@ export function SuccessModal({ open, onClose }: SuccessModalProps) {
           <line x1="6" y1="6" x2="18" y2="18" />
         </svg>
       </button>
-      <div className="relative w-full max-w-md rounded-lg border border-border bg-neutral-900 p-12 text-center shadow-2xl">
-        <h3 className="text-4xl font-bold text-white">Děkujeme!</h3>
-        <p className="mt-6 text-lg text-gray">
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          maxWidth: "28rem",
+          borderRadius: "0.5rem",
+          border: "1px solid #333",
+          backgroundColor: "#171717",
+          padding: "3rem 2.5rem",
+          textAlign: "center",
+          boxShadow: "0 25px 50px -12px rgba(0,0,0,0.5)",
+        }}
+      >
+        <h3 style={{ fontSize: "2.25rem", fontWeight: "bold", color: "#fff", margin: 0 }}>
+          Děkujeme!
+        </h3>
+        <p style={{ marginTop: "1.5rem", fontSize: "1.125rem", color: "#999", lineHeight: 1.6 }}>
           Vaše přihláška byla odeslána.<br />Ozveme se vám co nejdříve s detaily kurzu.
         </p>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
