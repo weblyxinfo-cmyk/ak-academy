@@ -13,6 +13,7 @@ type FormStatus = "idle" | "loading" | "success" | "error";
 
 export function CourseSignupForm({ defaultCourse, defaultCity }: CourseSignupFormProps) {
   const [status, setStatus] = useState<FormStatus>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   function validate(form: FormData) {
@@ -42,6 +43,7 @@ export function CourseSignupForm({ defaultCourse, defaultCity }: CourseSignupFor
     }
 
     setErrors({});
+    setErrorMsg("");
     setStatus("loading");
 
     try {
@@ -61,9 +63,13 @@ export function CourseSignupForm({ defaultCourse, defaultCity }: CourseSignupFor
       if (res.ok) {
         setStatus("success");
       } else {
+        const data = await res.json().catch(() => null);
+        setErrorMsg(data?.error || `Chyba serveru (${res.status})`);
         setStatus("error");
       }
-    } catch {
+    } catch (err) {
+      console.error("Signup form error:", err);
+      setErrorMsg("Nepodařilo se odeslat formulář. Zkontrolujte připojení k internetu.");
       setStatus("error");
     }
   }
@@ -167,7 +173,7 @@ export function CourseSignupForm({ defaultCourse, defaultCity }: CourseSignupFor
 
       {status === "error" && (
         <p className="text-sm text-red-400">
-          Něco se pokazilo. Zkuste to prosím znovu.
+          {errorMsg || "Něco se pokazilo. Zkuste to prosím znovu."}
         </p>
       )}
 

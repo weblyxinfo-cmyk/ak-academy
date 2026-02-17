@@ -8,6 +8,7 @@ type FormStatus = "idle" | "loading" | "success" | "error";
 
 export function Contact() {
   const [status, setStatus] = useState<FormStatus>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   function validate(form: FormData) {
@@ -37,6 +38,7 @@ export function Contact() {
     }
 
     setErrors({});
+    setErrorMsg("");
     setStatus("loading");
 
     try {
@@ -56,9 +58,13 @@ export function Contact() {
       if (res.ok) {
         setStatus("success");
       } else {
+        const data = await res.json().catch(() => null);
+        setErrorMsg(data?.error || `Chyba serveru (${res.status})`);
         setStatus("error");
       }
-    } catch {
+    } catch (err) {
+      console.error("Contact form error:", err);
+      setErrorMsg("Nepodařilo se odeslat formulář. Zkontrolujte připojení k internetu.");
       setStatus("error");
     }
   }
@@ -220,7 +226,7 @@ export function Contact() {
 
               {status === "error" && (
                 <p className="text-sm text-red-400">
-                  Něco se pokazilo. Zkuste to prosím znovu.
+                  {errorMsg || "Něco se pokazilo. Zkuste to prosím znovu."}
                 </p>
               )}
 
