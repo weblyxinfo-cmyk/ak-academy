@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import confetti from "canvas-confetti";
 
 interface SuccessModalProps {
@@ -10,12 +10,22 @@ interface SuccessModalProps {
 
 export function SuccessModal({ open, onClose }: SuccessModalProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [visible, setVisible] = useState(false);
+  const [closing, setClosing] = useState(false);
 
-  const handleClose = useCallback(() => {
-    onClose();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [onClose]);
+  // Open animation
+  useEffect(() => {
+    if (open) {
+      // Small delay to trigger CSS transition
+      requestAnimationFrame(() => setVisible(true));
+      setClosing(false);
+    } else {
+      setVisible(false);
+      setClosing(false);
+    }
+  }, [open]);
 
+  // Confetti
   useEffect(() => {
     if (!open || !canvasRef.current) return;
 
@@ -26,12 +36,13 @@ export function SuccessModal({ open, onClose }: SuccessModalProps) {
       myConfetti({ particleCount: 80, spread: 70, origin: { x: 0.7, y: 0.5 } });
     };
 
-    shoot();
-    const t1 = setTimeout(shoot, 600);
-    const t2 = setTimeout(shoot, 1400);
-    const t3 = setTimeout(shoot, 2500);
+    const t0 = setTimeout(shoot, 300);
+    const t1 = setTimeout(shoot, 900);
+    const t2 = setTimeout(shoot, 1700);
+    const t3 = setTimeout(shoot, 2800);
 
     return () => {
+      clearTimeout(t0);
       clearTimeout(t1);
       clearTimeout(t2);
       clearTimeout(t3);
@@ -39,13 +50,35 @@ export function SuccessModal({ open, onClose }: SuccessModalProps) {
     };
   }, [open]);
 
+  const handleClose = useCallback(() => {
+    setClosing(true);
+    // Wait for fade-out animation, then scroll and close
+    setTimeout(() => {
+      onClose();
+      setVisible(false);
+      setClosing(false);
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 100);
+    }, 400);
+  }, [onClose]);
+
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-400"
+      style={{ opacity: visible && !closing ? 1 : 0 }}
+    >
       <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={handleClose} />
       <canvas ref={canvasRef} className="pointer-events-none absolute inset-0 h-full w-full" />
-      <div className="relative w-full max-w-md rounded-lg border border-border bg-neutral-900 p-10 text-center shadow-2xl">
+      <div
+        className="relative w-full max-w-md rounded-lg border border-border bg-neutral-900 p-10 text-center shadow-2xl transition-all duration-400"
+        style={{
+          transform: visible && !closing ? "scale(1)" : "scale(0.9)",
+          opacity: visible && !closing ? 1 : 0,
+        }}
+      >
         <button
           onClick={handleClose}
           className="absolute right-4 top-4 text-gray transition-colors hover:text-white"
@@ -58,7 +91,7 @@ export function SuccessModal({ open, onClose }: SuccessModalProps) {
         </button>
         <h3 className="text-4xl font-bold text-white">Děkujeme!</h3>
         <p className="mt-6 text-lg text-gray">
-          Vaše přihláška byla odeslána. Ozveme se vám co nejdříve s detaily kurzu.
+          Vaše přihláška byla odeslána.<br />Ozveme se vám co nejdříve s detaily kurzu.
         </p>
       </div>
     </div>
