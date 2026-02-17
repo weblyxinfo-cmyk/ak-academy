@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect, FormEvent } from "react";
-import confetti from "canvas-confetti";
+import { useState, FormEvent } from "react";
 import { IconCircle } from "@/components/IconCircle";
+import { SuccessModal } from "@/components/SuccessModal";
 import { courses, siteConfig } from "@/lib/data";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
@@ -70,36 +70,12 @@ export function Contact() {
     }
   }
 
-  useEffect(() => {
-    if (status === "success") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      const shoot = () => {
-        confetti({ particleCount: 80, spread: 70, origin: { x: 0.3, y: 0.3 } });
-        confetti({ particleCount: 80, spread: 70, origin: { x: 0.7, y: 0.3 } });
-      };
-      shoot();
-      const t1 = setTimeout(shoot, 500);
-      const t2 = setTimeout(shoot, 1200);
-      return () => { clearTimeout(t1); clearTimeout(t2); };
-    }
-  }, [status]);
-
-  if (status === "success") {
-    return (
-      <section id="contact" className="flex min-h-screen items-center py-20">
-        <div className="container">
-          <div className="mx-auto max-w-2xl rounded-lg border border-border p-16 text-center">
-            <h3 className="text-4xl font-bold text-white">Děkujeme!</h3>
-            <p className="mt-6 text-lg text-gray">
-              Vaše přihláška byla odeslána. Ozveme se vám co nejdříve s detaily kurzu.
-            </p>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
   return (
+    <>
+    <SuccessModal
+      open={status === "success"}
+      onClose={() => setStatus("idle")}
+    />
     <section id="contact" className="py-20">
       <div className="container">
         <h2 className="text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -258,5 +234,6 @@ export function Contact() {
         </div>
       </div>
     </section>
+    </>
   );
 }
