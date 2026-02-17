@@ -2,7 +2,7 @@ import Image from "next/image";
 import { IconCircle } from "@/components/IconCircle";
 import type { Course } from "@/types";
 
-const levelLabels = {
+const levelLabels: Record<string, string> = {
   beginner: "Začátečník",
   advanced: "Pokročilý",
   masterclass: "Masterclass",

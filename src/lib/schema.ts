@@ -85,7 +85,7 @@ export function generateFAQSchema(items: FAQItem[]) {
   };
 }
 
-export function generateLocalBusinessSchema(city: CityData, address: string, zip: string) {
+export function generateLocalBusinessSchema(city: Pick<CityData, "slug" | "name" | "seoDescription">, address: string, zip: string) {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",

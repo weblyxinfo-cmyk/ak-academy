@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { db } from "@/db";
+import { contacts } from "@/db/schema";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -20,6 +22,22 @@ export async function POST(request: Request) {
         { error: "Neplatný formát emailu." },
         { status: 400 }
       );
+    }
+
+    // Persist to database (skip if DB not configured)
+    if (process.env.TURSO_DATABASE_URL) {
+      try {
+        await db.insert(contacts).values({
+          name: name.trim(),
+          email: email.trim(),
+          phone: body.phone?.trim() || null,
+          course: body.course || null,
+          message: message.trim(),
+          consent: true,
+        });
+      } catch (dbError) {
+        console.error("DB insert failed (contact):", dbError);
+      }
     }
 
     const to = process.env.CONTACT_EMAIL_TO || "ak.barbers.cz@gmail.com";

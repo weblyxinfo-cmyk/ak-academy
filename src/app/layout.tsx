@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { CookieConsent } from "@/components/layout/CookieConsent";
 import "./globals.css";
 
 const inter = Inter({
@@ -47,8 +44,10 @@ export const metadata: Metadata = {
     canonical: "https://barber-kurzy.com",
   },
   icons: {
-    icon: "/icon.svg",
-    apple: "/apple-icon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
   },
 };
 
@@ -60,15 +59,10 @@ export default function RootLayout({
   return (
     <html lang="cs" className={inter.variable}>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
       </head>
-      <body className="antialiased">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <CookieConsent />
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

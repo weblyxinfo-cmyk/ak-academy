@@ -5,10 +5,10 @@ export interface ProgramWeek {
 }
 
 export interface Course {
-  id: string;
+  id: string | number;
   slug?: string;
   title: string;
-  level: "beginner" | "advanced" | "masterclass";
+  level: string;
   duration: string;
   hours: number;
   price: string;
@@ -16,10 +16,12 @@ export interface Course {
   image: string;
   highlights: string[];
   description: string;
-  longDescription?: string;
-  forWho?: string[];
-  includes?: string[];
+  longDescription?: string | null;
+  forWho?: string[] | null;
+  includes?: string[] | null;
   program?: ProgramWeek[];
+  metaTitle?: string | null;
+  metaDescription?: string | null;
   meta?: {
     title: string;
     description: string;
@@ -32,24 +34,24 @@ export interface Instructor {
   experience: string;
   focus: string;
   bio: string;
-  longBio?: string;
+  longBio?: string | null;
   image: string;
-  instagram?: string;
+  instagram?: string | null;
 }
 
 export interface Testimonial {
-  id?: string;
+  id?: string | number;
   name: string;
   course: string;
   rating: number;
   text: string;
-  city?: string;
+  city?: string | null;
 }
 
 export interface FAQItem {
   question: string;
   answer: string;
-  category?: string;
+  category?: string | null;
 }
 
 export interface NavItem {
@@ -81,7 +83,7 @@ export interface Location {
   city: string;
   address: string;
   zip: string;
-  transport?: string;
+  transport?: string | null;
   isMain?: boolean;
 }
 
