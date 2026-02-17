@@ -40,8 +40,8 @@ export async function POST(request: Request) {
       }
     }
 
-    const to = process.env.CONTACT_EMAIL_TO || "ak.barbers.cz@gmail.com";
-    const from = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
+    const to = (process.env.CONTACT_EMAIL_TO || "ak.barbers.cz@gmail.com").trim();
+    const from = (process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev").trim();
 
     await resend.emails.send({
       from: `AK Academy Web <${from}>`,
