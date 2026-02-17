@@ -78,21 +78,26 @@ export function CourseSignupForm({ defaultCourse, defaultCity }: CourseSignupFor
   useEffect(() => {
     if (status === "success") {
       window.scrollTo({ top: 0, behavior: "smooth" });
-      confetti({
-        particleCount: 150,
-        spread: 80,
-        origin: { y: 0.3 },
-      });
+      const shoot = () => {
+        confetti({ particleCount: 80, spread: 70, origin: { x: 0.3, y: 0.3 } });
+        confetti({ particleCount: 80, spread: 70, origin: { x: 0.7, y: 0.3 } });
+      };
+      shoot();
+      const t1 = setTimeout(shoot, 500);
+      const t2 = setTimeout(shoot, 1200);
+      return () => { clearTimeout(t1); clearTimeout(t2); };
     }
   }, [status]);
 
   if (status === "success") {
     return (
-      <div className="mx-auto max-w-2xl rounded-lg border border-border p-12 text-center">
-        <h3 className="text-3xl font-bold text-white">Děkujeme!</h3>
-        <p className="mt-4 text-gray">
-          Vaše přihláška byla odeslána. Ozveme se vám co nejdříve s detaily kurzu.
-        </p>
+      <div className="mx-auto flex min-h-screen max-w-2xl items-center">
+        <div className="w-full rounded-lg border border-border p-16 text-center">
+          <h3 className="text-4xl font-bold text-white">Děkujeme!</h3>
+          <p className="mt-6 text-lg text-gray">
+            Vaše přihláška byla odeslána. Ozveme se vám co nejdříve s detaily kurzu.
+          </p>
+        </div>
       </div>
     );
   }
