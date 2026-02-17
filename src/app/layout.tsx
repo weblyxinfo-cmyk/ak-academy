@@ -46,6 +46,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://barber-kurzy.com",
   },
+  icons: {
+    icon: "/icon.svg",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
