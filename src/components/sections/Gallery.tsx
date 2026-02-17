@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1585747860019-8a1d2481c8f5?w=600&q=80", alt: "Academy training" },
+  { src: "https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?w=600&q=80", alt: "Academy training" },
   { src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80", alt: "Hands-on practice" },
   { src: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80", alt: "Instructor demo" },
   { src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80", alt: "Tools setup" },
