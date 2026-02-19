@@ -45,9 +45,9 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "32x32" },
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "48x48" },
     ],
+    apple: "/apple-icon.png",
   },
 };
 
@@ -58,10 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="cs" className={inter.variable}>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-      </head>
+      <head />
       <body className="antialiased">{children}</body>
     </html>
   );
