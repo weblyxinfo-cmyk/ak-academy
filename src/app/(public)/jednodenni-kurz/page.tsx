@@ -52,6 +52,7 @@ export default async function JednodennikurzPage() {
           title="1denní barber masterclass – intenzivní workshop"
           subtitle="10 hodin koncentrovaného know-how od špičkových lektorů. Live demonstrace, hands-on trénink a okamžitá zpětná vazba – vše za jeden den."
           price={course.price}
+          image="/images/courses/jednodenni.jpeg"
           ctaText="Přihlásit se na workshop"
           ctaHref="#signup"
           trustBadges={[

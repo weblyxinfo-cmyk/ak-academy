@@ -57,6 +57,7 @@ export default async function MesicniKurzPage() {
           title="Měsíční barber kurz – 180 hodin profesionální výuky"
           subtitle="Kompletní barber vzdělání od základů po profesionální úroveň. Za jeden měsíc se z úplného začátečníka stanete sebevědomým barberem s certifikátem AK Barbers Academy."
           price={course.price}
+          image="/images/courses/mesicni.jpeg"
           ctaText="Přihlásit se na kurz"
           ctaHref="#signup"
           secondaryCtaText="Zobrazit program kurzu"

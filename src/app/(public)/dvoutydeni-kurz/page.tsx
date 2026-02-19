@@ -57,6 +57,7 @@ export default async function DvoutydeniKurzPage() {
           title="2týdenní barber kurz – 90 hodin intenzivního tréninku"
           subtitle="Kompaktní a intenzivní program pro kadeřníky a samoky, kteří se chtějí specializovat na barber techniky. Za dva týdny zvládnete fade, vousy i styling."
           price={course.price}
+          image="/images/courses/dvoutydeni.jpeg"
           ctaText="Přihlásit se na kurz"
           ctaHref="#signup"
           secondaryCtaText="Zobrazit program kurzu"

@@ -14,6 +14,7 @@ interface LandingHeroProps {
   secondaryCtaHref?: string;
   price?: string;
   trustBadges?: TrustBadge[];
+  image?: string;
 }
 
 export function LandingHero({
@@ -25,11 +26,12 @@ export function LandingHero({
   secondaryCtaHref,
   price,
   trustBadges,
+  image,
 }: LandingHeroProps) {
   return (
     <section className="relative flex min-h-[50svh] items-center justify-center overflow-hidden border-b border-border sm:min-h-[70vh]">
       <Image
-        src="/images/hero-bg.png"
+        src={image || "/images/hero-bg.png"}
         alt=""
         fill
         className="object-cover object-center"
