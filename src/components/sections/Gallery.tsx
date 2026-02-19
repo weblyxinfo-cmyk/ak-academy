@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?w=600&q=80", alt: "Academy training" },
-  { src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80", alt: "Hands-on practice" },
-  { src: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80", alt: "Instructor demo" },
-  { src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80", alt: "Tools setup" },
-  { src: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80", alt: "Graduation" },
-  { src: "https://images.unsplash.com/photo-1587909209111-5097ee578ec3?w=600&q=80", alt: "Practice session" },
-  { src: "https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=600&q=80", alt: "Fade technique" },
-  { src: "https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=600&q=80", alt: "Classroom" },
+  { src: "/images/gallery/gallery-1.jpeg", alt: "Wavy fade profil" },
+  { src: "/images/gallery/gallery-2.jpeg", alt: "Fade detail" },
+  { src: "/images/gallery/gallery-3.jpeg", alt: "Curly fade" },
+  { src: "/images/gallery/gallery-4.jpeg", alt: "Textured crop" },
+  { src: "/images/gallery/gallery-5.jpeg", alt: "Curly fade zezadu" },
+  { src: "/images/gallery/gallery-6.jpeg", alt: "Styling vlasů" },
+  { src: "/images/gallery/gallery-7.jpeg", alt: "Výuka v akademii" },
+  { src: "/images/gallery/gallery-8.jpeg", alt: "Stříhání strojkem" },
 ];
 
 export function Gallery() {
