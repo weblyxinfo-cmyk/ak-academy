@@ -23,24 +23,34 @@ export function Courses() {
           {courses.map((course) => (
             <div
               key={course.id}
-              className="group relative overflow-hidden rounded-xl border border-border bg-bg-card p-6 transition-all duration-300 hover:border-accent/40 hover:shadow-[0_0_20px_rgba(46,184,166,0.15)]"
+              className="group flex flex-col overflow-hidden rounded-xl border border-border transition-all duration-300 hover:border-accent/40 hover:shadow-[0_0_20px_rgba(46,184,166,0.15)]"
             >
-              <div className="absolute right-0 top-0 h-1 w-full bg-gradient-to-r from-transparent via-accent/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <span className="inline-block rounded-full bg-gradient-to-r from-teal-500 to-cyan-400 px-3 py-1 text-xs font-semibold text-white">
-                {levelLabels[course.level]}
-              </span>
-              <h3 className="mt-3 text-xl font-bold text-white">{course.title}</h3>
-              <p className="mt-1 text-sm text-gray">{course.duration}</p>
-              <p className="mt-4 text-2xl font-bold text-white">{course.price}</p>
-              {course.slug && (
-                <a
-                  href={`/${course.slug}`}
-                  className="mt-4 flex items-center gap-2 text-sm font-semibold text-accent"
-                >
-                  Více o kurzu
-                  <IconCircle />
-                </a>
-              )}
+              <div className="relative aspect-video">
+                <Image
+                  src={course.image}
+                  alt={course.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                />
+                <span className="absolute right-3 top-3 rounded-full bg-gradient-to-r from-teal-500 to-cyan-400 px-3 py-1 text-xs font-semibold text-white">
+                  {levelLabels[course.level]}
+                </span>
+              </div>
+              <div className="flex flex-1 flex-col p-5">
+                <h3 className="text-xl font-bold text-white">{course.title}</h3>
+                <p className="mt-1 text-sm text-gray">{course.duration}</p>
+                <p className="mt-3 text-2xl font-bold text-white">{course.price}</p>
+                {course.slug && (
+                  <a
+                    href={`/${course.slug}`}
+                    className="mt-3 flex items-center gap-2 text-sm font-semibold text-accent"
+                  >
+                    Více o kurzu
+                    <IconCircle />
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
