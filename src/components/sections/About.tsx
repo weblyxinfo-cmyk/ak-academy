@@ -1,11 +1,4 @@
-const branches = [
-  { city: "Praha 1", address: "Národní 949/19", zip: "110 00 Staré Město" },
-  { city: "Praha 6", address: "Bělohorská 1393/44", zip: "169 00 Praha 6" },
-  { city: "Slaný", address: "Třebízského 182", zip: "274 01 Slaný" },
-  { city: "Beroun", address: "Havlíčkova 128", zip: "266 01 Beroun" },
-  { city: "Beroun", address: "Plzeňská 145/49", zip: "266 01 Beroun-Město" },
-  { city: "Plzeň", address: "Gerská 2030/23", zip: "323 00 Plzeň 1-Bolevec" },
-];
+const cities = ["Praha", "Slaný", "Beroun", "Plzeň"];
 
 const features = [
   {
@@ -45,26 +38,17 @@ export function About() {
           <h3 className="text-center text-2xl font-bold text-white">
             Kde probíhají kurzy
           </h3>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {branches.map((b, i) => (
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            {cities.map((city) => (
               <div
-                key={i}
-                className="group relative overflow-hidden rounded-xl border border-border bg-bg-card p-5 transition-all duration-300 hover:border-accent/40 hover:shadow-[0_0_20px_rgba(46,184,166,0.15)]"
+                key={city}
+                className="group flex items-center gap-2 rounded-full border border-border bg-bg-card px-5 py-2.5 transition-all duration-300 hover:border-accent/40 hover:shadow-[0_0_20px_rgba(46,184,166,0.15)]"
               >
-                <div className="absolute right-0 top-0 h-1 w-full bg-gradient-to-r from-transparent via-accent/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/15">
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-accent">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                      <circle cx="12" cy="10" r="3" fill="#141414" stroke="none" />
-                    </svg>
-                  </div>
-                  <div className="min-w-0">
-                    <p className="font-semibold text-white">{b.city}</p>
-                    <p className="mt-1 text-sm text-gray">{b.address}</p>
-                    <p className="text-sm text-gray-light">{b.zip}</p>
-                  </div>
-                </div>
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-accent">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" fill="#141414" stroke="none" />
+                </svg>
+                <span className="font-semibold text-white">{city}</span>
               </div>
             ))}
           </div>

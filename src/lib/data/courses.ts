@@ -10,7 +10,7 @@ export const courses: Course[] = [
     hours: 180,
     price: "35 000 Kč",
     priceNum: 35000,
-    image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80",
+    image: "/images/courses/mesicni.jpeg",
     description:
       "Kompletní barber kurz pro začátečníky i pokročilé. Intenzivní měsíční program pod vedením zkušených lektorů z AK Barbers.",
     longDescription:
@@ -106,7 +106,7 @@ export const courses: Course[] = [
     hours: 90,
     price: "15 000 Kč",
     priceNum: 15000,
-    image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80",
+    image: "/images/courses/dvoutydeni.jpeg",
     description:
       "Intenzivní dvoutýdenní program zaměřený na klíčové barber dovednosti. Ideální pro ty, kteří se chtějí rychle posunout.",
     longDescription:
@@ -175,7 +175,7 @@ export const courses: Course[] = [
     hours: 10,
     price: "4 999 Kč",
     priceNum: 4999,
-    image: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80",
+    image: "/images/courses/jednodenni.jpeg",
     description:
       "Jednodenní intenzivní workshop zaměřený na konkrétní techniky. Vhodný pro barbery, kteří si chtějí zdokonalit specifické dovednosti.",
     longDescription:
