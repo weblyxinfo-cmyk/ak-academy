@@ -9,7 +9,7 @@ export const siteConfig = {
   phone: "+420 775 502 831",
   email: "ak.barbers.cz@gmail.com",
   social: {
-    facebook: "https://facebook.com/akbarberscz",
+    facebook: "https://www.facebook.com/akbarber.cz/",
     instagram: "https://instagram.com/ak.barbers.cz",
     google: "https://www.google.com/maps/search/Barber+Kurzy+Praha",
   },

@@ -8,11 +8,11 @@ interface TestimonialSliderProps {
 
 export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
   return (
-    <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory sm:grid sm:grid-cols-2 sm:overflow-visible sm:pb-0 lg:grid-cols-3">
+    <div className="-mx-4 flex gap-4 overflow-x-auto px-4 pb-4 snap-x snap-mandatory sm:mx-0 sm:gap-6 sm:px-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:pb-0 lg:grid-cols-3">
       {testimonials.map((t) => (
         <div
           key={t.id || t.name}
-          className="min-w-[280px] shrink-0 snap-start rounded-lg border border-border p-6 sm:min-w-0"
+          className="min-w-[85vw] max-w-[85vw] shrink-0 snap-start rounded-lg border border-border p-6 sm:min-w-0 sm:max-w-none"
         >
           <div className="flex gap-0.5">
             {Array.from({ length: 5 }).map((_, i) => (

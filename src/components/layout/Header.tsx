@@ -35,7 +35,7 @@ function DesktopDropdown({ item, isHome }: { item: NavItem; isHome: boolean }) {
       </a>
 
       {open && item.children && (
-        <div className="absolute left-0 top-full z-50 mt-1 min-w-[180px] rounded-lg border border-border bg-bg p-2 shadow-xl">
+        <div className="absolute left-0 top-full z-50 min-w-[180px] rounded-lg border border-border bg-bg p-2 pt-3 shadow-xl before:absolute before:-top-2 before:left-0 before:h-2 before:w-full">
           {item.children.map((child) => (
             <a
               key={child.href}
